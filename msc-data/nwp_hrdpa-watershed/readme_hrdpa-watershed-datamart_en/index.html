@@ -88,7 +88,7 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#high-resolution-deterministic-precipitation-analysis-hrdpa-average-watershed-precipitation-data-in-grib2-format">High Resolution Deterministic Precipitation Analysis (HRDPA) average watershed precipitation Data in GRIB2 Format</a></li>
+        <li class="main active"><a href="#high-resolution-deterministic-precipitation-analysis-hrdpa-average-watershed-precipitation-data-in-esri-shapefile-format">High Resolution Deterministic Precipitation Analysis (HRDPA) average watershed precipitation data in Esri Shapefile Format</a></li>
             <li><a href="#data-location">Data location</a></li>
             <li><a href="#file-name-nomenclature">File name nomenclature</a></li>
             <li><a href="#list-of-variables">List of variables</a></li>
@@ -101,7 +101,7 @@
 <p><a href="../readme_hrdpa-watershed-datamart_fr/">En français</a></p>
 <p><img alt="ECCC logo" src="../../../img_eccc-logo.png" /></p>
 <p><a href="../../../readme_en/">TOC</a> &gt; <a href="../../readme_en/">MSC data</a> &gt; <a href="../readme_hrdpa-watershed_en/">HRDPA Watershed</a> &gt; HRDPA Watershed on MSC Datamart</p>
-<h1 id="high-resolution-deterministic-precipitation-analysis-hrdpa-average-watershed-precipitation-data-in-grib2-format">High Resolution Deterministic Precipitation Analysis (HRDPA) average watershed precipitation Data in GRIB2 Format</h1>
+<h1 id="high-resolution-deterministic-precipitation-analysis-hrdpa-average-watershed-precipitation-data-in-esri-shapefile-format">High Resolution Deterministic Precipitation Analysis (HRDPA) average watershed precipitation data in Esri Shapefile Format</h1>
 <p>Data for over 1900 watersheds is available. In order to reduce the number of files on the MSC Datamart, it has been necessary to group these watersheds by drainage basin:</p>
 <ul>
 <li>Maritime Provinces</li>
@@ -120,21 +120,21 @@
 <p>This number can also be averaged so as to reflect the average weight given to observations in the computation of watershed precipitation. It can be interpreted as a confidence index for the precipitation amount reporter. Values close to one indicate that the HRDPA estimate comes essentially from observed precipitation data, whereas values close to zero indicate that the HRDPA estimate comes essentially from a short-term precipitation forecast.</p>
 <h2 id="data-location">Data location</h2>
 <p>MSC Datamart data can be <a href="../../../msc-datamart/amqp_en/">automatically retrieved with the Advanced Message Queuing Protocol (AMQP)</a> as soon as they become available. An <a href="../../../usage/readme_en/">overview and examples to access and use the Meteorological Service of Canada's open data</a> is also available.</p>
-<p>The data is available using the HTTP protocol and resides in a directory that is plainly accessible to a web browser. Visiting that directory with an interactive browser will yield a raw listing of links, each link being a downloadable GRIB2 file. In practice, we recommend writing your own script to automate the downloading of the desired data (using wget or equivalent). If you are unsure of how to proceed, you might like to take a look at our brief wget usage guide.</p>
-<p>The data can be accessed at the following URLs :</p>
+<p>The data is available using the HTTP protocol and resides in a directory that is plainly accessible to a web browser. Visiting that directory with an interactive browser will yield a raw listing of links of downloadable Esri Shapefile data.</p>
+<p>The data can be accessed at the following URLs:</p>
 <ul>
 <li>https://dd.weather.gc.ca/analysis/precip/hrdpa_watershed/shapefile/HH</li>
 </ul>
-<p>where :</p>
+<p>where:</p>
 <ul>
 <li><strong>HH</strong> :  Accumulation period in hours: 06 or 24 </li>
 </ul>
 <p>A 30-day history is kept in this directory.</p>
 <h2 id="file-name-nomenclature">File name nomenclature</h2>
-<p>NOTE : ALL HOURS ARE IN UTC.</p>
-<p>The files have the following nomenclature :</p>
+<p>NOTE: ALL HOURS ARE IN UTC.</p>
+<p>The files have the following nomenclature:</p>
 <p>CMC_HRDPA_WATERSHED-HHH-CC00cutoff_SFC_0_ps2.5km_YYYYMMDDHH_000_ID.SUF</p>
-<p>where :</p>
+<p>where:</p>
 <ul>
 <li><strong>HHH</strong> : Accumulation period in hours (006 or 024)</li>
 <li><strong>CC</strong> : Cutoff time in hours (01 or 07) after the end of the accumulation period</li>
@@ -156,7 +156,7 @@
 </ul>
 </li>
 <li>
-<p><strong>SUF</strong> : suffix of Shapefile :</p>
+<p><strong>SUF</strong> : suffix of Shapefile:</p>
 <ul>
 <li>"dbf" - attributes of the shapes found in the Shapefile</li>
 <li>"prj" - text file describing the projection of the data</li>
@@ -165,14 +165,16 @@
 </ul>
 </li>
 </ul>
-<p>Example : 
-* CMC_HRDPA_WATERSHED-024-0700cutoff_SFC_0_ps2.5km_2018021612_000_10.dbf
-* CMC_HRDPA_WATERSHED-024-0700cutoff_SFC_0_ps2.5km_2018021612_000_10.prj
-* CMC_HRDPA_WATERSHED-024-0700cutoff_SFC_0_ps2.5km_2018021612_000_10.shp
-* CMC_HRDPA_WATERSHED-024-0700cutoff_SFC_0_ps2.5km_2018021612_000_10.shx</p>
+<p>Example: </p>
+<ul>
+<li>CMC_HRDPA_WATERSHED-024-0700cutoff_SFC_0_ps2.5km_2018021612_000_10.dbf</li>
+<li>CMC_HRDPA_WATERSHED-024-0700cutoff_SFC_0_ps2.5km_2018021612_000_10.prj</li>
+<li>CMC_HRDPA_WATERSHED-024-0700cutoff_SFC_0_ps2.5km_2018021612_000_10.shp</li>
+<li>CMC_HRDPA_WATERSHED-024-0700cutoff_SFC_0_ps2.5km_2018021612_000_10.shx</li>
+</ul>
 <p>This set of files would contain average precipitation for a 24h accumulation period ending at 12 UTC on February 16, 2018 for watersheds in the arctic basin, and the analysis would have been produced 7 hours after the end of that accumulation period.</p>
 <p>The area associated with each watershed is defined by a single polygon.</p>
-<p>Seven attributes are provided for each watershed :</p>
+<p>Seven attributes are provided for each watershed:</p>
 <ul>
 <li><strong>Station</strong>    : Station ID</li>
 <li><strong>StationNam</strong> : Station Name</li>
@@ -183,7 +185,7 @@
 <li><strong>CFIA</strong>       : Average confidence index associated with the polygon (from zero to one), which reflects the average weight given to observations (in-situ and radar) in the computation of the watershed precipitation</li>
 </ul>
 <h2 id="list-of-variables">List of variables</h2>
-<p>Warning : the tables below are not up to date (to come), some variables are missing. Feel free to <a href="mailto:ec.dps-client.ec@canada.ca">contact us</a> for more information.</p>
+<p>Warning: the tables below are not up to date (to come), some variables are missing. Feel free to <a href="mailto:ec.dps-client.ec@canada.ca">contact us</a> for more information.</p>
 <ul>
 <li><strong>Station</strong>    : Station ID</li>
 <li><strong>StationNam</strong> : Station Name</li>
@@ -194,7 +196,7 @@
 <li><strong>CFIA</strong>       : Average confidence index associated with the polygon (from zero to one), which reflects the average weight given to observations (in-situ and radar) in the computation of the watershed precipitation</li>
 </ul>
 <h2 id="support">Support</h2>
-<p>If you have any questions about these data, please contact us at: ec.dps-client.ec@canada.ca</p>
+<p>If you have any questions about these data, please contact us at: <a href="mailto:ec.dps-client.ec@canada.ca">ec.dps-client.ec@canada.ca</a></p>
 <h2 id="announcements-from-the-dd_info-mailing-list">Announcements from the dd_info mailing list</h2>
 <p>Announcements related to this dataset are available in the <a href="https://lists.ec.gc.ca/cgi-bin/mailman/listinfo/dd_info">dd_info list</a>.</p></div>
         </div>

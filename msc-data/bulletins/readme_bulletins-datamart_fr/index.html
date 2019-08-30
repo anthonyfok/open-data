@@ -115,59 +115,52 @@
 <p>Les bulletins sont regroupés dans des structures de répertoires basés sur la date et sur le type de bulletin.
 Les répertoires suivent la nomenclature suivante:</p>
 <p>YYYYMMDD/AA/BBBB/HH</p>
-<p>où :
-* <strong>YYYYMMDD</strong> : Date de réception du bulletin (pas la date d'émission!).
-* <strong>AA</strong> : 2 lettres indiquant le type de bulletin. La référence complète
-peut être trouvée dans le Manual on the Global Telecommunication System de
-l'OMM, dans la section Supplément II-5, ce qui correspond aux pages
-103-108. Le fichier se trouve en ligne à cette adresse : <a href="https://www.wmo.int/pages/prog/www/ois/Operational_Information/Publications/WMO_386/WMO_386_Vol_I_2009_fr.pdf">https://www.wmo.int/pages/prog/www/ois/Operational_Information/Publications/WMO_386/WMO_386_Vol_I_2009_fr.pdf</a>
-* <strong>BBBB</strong> : 4 lettres représentant le code de l'émetteur du bulletin.</p>
-<p>Les 2 lettres suivant "CW" ou "CY" dans le nom du répertoire représente le 
-nom du bureau émetteur :</p>
-<pre><code>* QX = Gander, (T.-N.) 
-* HX = Halifax (maintenant Dartmouth)  
-* UL = Montréal  
-* QB = Québec 
-* XK = Rimouski  
-* TO = Toronto  
-* WG = Winnipeg  
-* NT = Territoire du Nord-ouest  
-* VR = Vancouver  
-* CN = Canada  
-* US = États-Unis
-</code></pre>
+<p>où :</p>
 <ul>
+<li><strong>YYYYMMDD</strong> : Date de réception du bulletin (pas la date d'émission!)</li>
+<li><strong>AA</strong> : 2 lettres indiquant le type de bulletin. La référence complète peut être trouvée dans le Manual on the Global Telecommunication System de l'OMM, dans la section Supplément II-5, ce qui correspond aux pages 103-108. Le fichier se trouve en ligne à cette adresse : <a href="https://www.wmo.int/pages/prog/www/ois/Operational_Information/Publications/WMO_386/WMO_386_Vol_I_2009_fr.pdf">https://www.wmo.int/pages/prog/www/ois/Operational_Information/Publications/WMO_386/WMO_386_Vol_I_2009_fr.pdf</a></li>
+<li><strong>BBBB</strong> : 4 lettres représentant le code de l'émetteur du bulletin.</li>
+</ul>
+<p>Les 2 lettres suivant "CW" ou "CY" dans le nom du répertoire représente le nom du bureau émetteur :</p>
+<ul>
+<li>QX = Gander, (T.-N.) </li>
+<li>HX = Halifax (maintenant Dartmouth)  </li>
+<li>UL = Montréal  </li>
+<li>QB = Québec </li>
+<li>XK = Rimouski  </li>
+<li>TO = Toronto  </li>
+<li>WG = Winnipeg  </li>
+<li>NT = Territoire du Nord-ouest  </li>
+<li>VR = Vancouver  </li>
+<li>CN = Canada  </li>
+<li>US = États-Unis </li>
 <li><strong>HH</strong> : Représente l'heure de réception du bulletin.</li>
 </ul>
 <p>Le nom de fichier suit cette nomenclature :</p>
 <p>BULLETIN_REGION_CODE1__CODE2</p>
 <p>Exemple :</p>
 <p>SOVD02_CWOW_250553___14352</p>
-<p>Il n'y a pas de liste complète des bulletins publiés sur le Datamart du SMC.
-Cependant, une fois le type de bulletin identifié dans le répertoire de
-l'OMM, vous pouvez aisément vérifier si ce bulletin est disponible grâce à
-l'<a href="https://collaboration.cmc.ec.gc.ca/cmc/cmos/public_doc/msc-data/bulletins/CMC_Bulletin_Search_Help_fr.pdf">utilitaire de recherche de bulletins</a>.</p>
+<p>Il n'y a pas de liste complète des bulletins publiés sur le Datamart du SMC. Cependant, une fois le type de bulletin identifié dans le répertoire de l'OMM, vous pouvez aisément vérifier si ce bulletin est disponible grâce à l'<a href="https://collaboration.cmc.ec.gc.ca/cmc/cmos/public_doc/msc-data/bulletins/CMC_Bulletin_Search_Help_fr.pdf">utilitaire de recherche de bulletins</a>.</p>
 <h3 id="avertissements-meteo">Avertissements météo</h3>
-<p>Les codes de 2 lettres pour les bulletins d'avertissements météo sont :
-* <strong>WA</strong> : Airmet
-* <strong>WC</strong> : Cyclone
-* <strong>WE</strong> : Tsunami
-* <strong>WF</strong> : Tornade
-* <strong>WH</strong> : Inondation
-* <strong>WL</strong> : Smog
-* <strong>WO</strong> : Spécial
-* <strong>WO</strong> : Ouragan
-* <strong>WP</strong> : Weather
-* <strong>WS</strong> : SIGMET
-* <strong>WT</strong> : Tropical
-* <strong>WU</strong> : Orage
-* <strong>WV</strong> : Volcanique
-* <strong>WW</strong> : Météorologique</p>
-<p>Un exemple d'avertissement météo reçu le 9 juin 2010 à 07 UTC émit par le 
-bureau d'Halifax est :</p>
-<p><a href="https://dd.meteo.gc.ca/bulletins/alphanumeric/20100609/WW/CWHX/07/WWCN14_CWHX_090744___64416">https://dd.meteo.gc.ca/bulletins/alphanumeric/20100609/WW/CWHX/07/WWCN14_CWHX_090744___64416</a></p>
+<p>Les codes de 2 lettres pour les bulletins d'avertissements météo sont :</p>
+<ul>
+<li><strong>WA</strong> : Airmet</li>
+<li><strong>WC</strong> : Cyclone</li>
+<li><strong>WE</strong> : Tsunami</li>
+<li><strong>WF</strong> : Tornade</li>
+<li><strong>WH</strong> : Inondation</li>
+<li><strong>WL</strong> : Smog</li>
+<li><strong>WO</strong> : Spécial</li>
+<li><strong>WO</strong> : Ouragan</li>
+<li><strong>WP</strong> : Weather</li>
+<li><strong>WS</strong> : SIGMET</li>
+<li><strong>WT</strong> : Tropical</li>
+<li><strong>WU</strong> : Orage</li>
+<li><strong>WV</strong> : Volcanique</li>
+<li><strong>WW</strong> : Météorologique</li>
+</ul>
 <h2 id="support">Support</h2>
-<p>Pour toute question relative à ces données, merci de nous contacter à l'adresse : ec.dps-client.ec@canada.ca</p>
+<p>Pour toute question relative à ces données, merci de nous contacter à l'adresse : <a href="mailto:ec.dps-client.ec@canada.ca">ec.dps-client.ec@canada.ca</a></p>
 <h2 id="annonces-de-la-liste-de-diffusion-dd_info">Annonces de la liste de diffusion dd_info</h2>
 <p>Les annonces reliées à ce jeu de données sont disponibles via la liste <a href="https://lists.ec.gc.ca/cgi-bin/mailman/listinfo/dd_info">dd_info</a>.</p></div>
         </div>
