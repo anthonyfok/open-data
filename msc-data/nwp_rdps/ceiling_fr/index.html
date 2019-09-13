@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../../img/favicon.ico">
-        <title>Readme hrdps en - MSC Open Data / Données ouvertes du SMC</title>
+        <title>Ceiling fr - MSC Open Data / Données ouvertes du SMC</title>
         <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../../css/base.css" rel="stylesheet">
@@ -88,39 +88,51 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#data-and-products-of-the-high-resolution-deterministic-prediction-system">Data and Products of the High Resolution Deterministic Prediction System</a></li>
-            <li><a href="#access">Access</a></li>
-            <li><a href="#technical-documentation">Technical documentation</a></li>
-            <li><a href="#change-log">Change log</a></li>
+        <li class="main active"><a href="#plafonds">Plafonds</a></li>
+            <li><a href="#givrage-et-niveau-de-congelation-panneau-superieur-gauche">Givrage et Niveau de congélation (panneau supérieur gauche)</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<p><a href="../readme_hrdps_fr/">En français</a></p>
+<p><a href="../ceiling_en/">In English</a></p>
 <p><img alt="ECCC logo" src="../../../img_eccc-logo.png" /></p>
-<p><a href="../../../readme_en/">TOC</a> &gt; <a href="../../readme_en/">MSC data</a> &gt; HRDPS</p>
-<h1 id="data-and-products-of-the-high-resolution-deterministic-prediction-system">Data and Products of the High Resolution Deterministic Prediction System</h1>
-<p>The High Resolution Deterministic Prediction System (HRDPS) carries out physics calculations to arrive at deterministic predictions of atmospheric elements from the current day out to 48 hours into the future. Atmospheric elements include temperature, precipitation, cloud cover, wind speed and direction, humidity and others. This product contains raw numerical results of these calculations. Geographical coverage of the system is most of Canada. Data is available over specific areas in the MSC Datamart and the whole coverage is available in the MSC GeoMet web services. Data is available at a horizontal resolution of 2.5 km. Data is available for 28 vertical levels. Predictions are performed up to four times a day.</p>
-<h2 id="access">Access</h2>
-<h3 id="how-to-access-the-data">How to access the data</h3>
-<p>These data are available on the data server services <a href="../../../msc-datamart/readme_en/">MSC Datamart</a> and the web services <a href="../../../msc-geomet/readme_en/">MSC GeoMet</a> respectively:</p>
+<p><a href="../../../readme_fr/">TdM</a> &gt; <a href="../../readme_fr/">Données du SMC</a> &gt; Plafonds</p>
+<h1 id="plafonds">Plafonds</h1>
+<p>Le modèle GEM, en configuration régionale, produit cette prévision de plafonds nuageux. Elle se présente en 4 panneaux pour des périodes de prévision de 6, 12, 18 et 24 heures (à 0000 et 1200). Cette carte affiche une prévision des nuages bas (moins de 6 500 pieds) et des nuages moyens (de 6 500 à 24 000 pieds).</p>
+<table>
+<thead>
+<tr>
+<th>6 heures</th>
+<th>12 heures</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>18 heures</td>
+<td>24 heures</td>
+</tr>
+</tbody>
+</table>
 <ul>
-<li><a href="../readme_hrdps-datamart_en/">GRIB2 data available on the MSC Datamart</a> </li>
-<li><a href="../readme_hrdps-datamart-alpha_en/">Experimental 1km GRIB2 data available on the MSC testing data repository DD-Alpha</a> </li>
-<li><a href="../../../msc-geomet/readme_en/">Data available via geospatial web services GeoMet-Weather</a></li>
+<li>La couverture géographique pour l'ensemble des panneaux est la suivante : L'Amérique du Nord et les régions de l'Arctique, l'Atlantique Nord, le nord de l'Europe et de l'Asie et le Pacifique Nord.</li>
+<li>Les identificateurs de transmission sont les suivants : CMC784, CMC785.</li>
 </ul>
-<p>An <a href="../../../usage/readme_en/">overview and examples to access and use the Meteorological Service of Canada's open data</a> is available.</p>
-<h3 id="licence">Licence</h3>
-<p>The <a href="../../../licence/readme_en/">end-user licence for Environment and Climate Change Canada's data servers</a> specifies the conditions of use of these data.</p>
-<h3 id="metadata">Metadata</h3>
-<p>The <a href="https://open.canada.ca/data/en/dataset/5b401fa0-6c29-57f0-b3d5-749f301d829d">metadata of the High Resolution Deterministic Prediction System are available on the Open Government Portal</a></p>
-<h2 id="technical-documentation">Technical documentation</h2>
+<p><strong>Échantillon de carte (4 panneaux)</strong></p>
+<p><img alt="echantillon de carte" src="http://collaboration.cmc.ec.gc.ca/cmc/cmos/public_doc/msc-data/nwp_rdps/samples_products/difax_reg_prog_4-panel-ceilings.gif" /></p>
+<h2 id="givrage-et-niveau-de-congelation-panneau-superieur-gauche">Givrage et Niveau de congélation (panneau supérieur gauche)</h2>
+<h3 id="champs">Champs</h3>
 <ul>
-<li><a href="http://collaboration.cmc.ec.gc.ca/cmc/CMOI/product_guide/docs/tech_specifications/tech_specifications_HRDPS_e.pdf">Current version of the High Resolution Deterministic Prediction System</a></li>
-<li><a href="https://collaboration.cmc.ec.gc.ca/cmc/cmoi/product_guide/docs/tech_notes/technote_hrdps-510_20190703_e.pdf">Technical Note</a></li>
+<li>Nuages bas<ul>
+<li>Représentation : Une ligne tiretée entourant une zone en pointillés pâles indique la prévision modélisée d'une couche nuageuse couvrant plus de 6/10 de la voûte céleste et une base inférieure à  6 500 pi au-dessus du niveau moyen de la mer.</li>
 </ul>
-<h2 id="change-log">Change log</h2>
-<p>The chronology of changes to the High Resolution Deterministic Prediction System (HRDPS) is available <a href="../changelog_hrdps_en/">here</a>.</p></div>
+</li>
+<li>Nuages moyens<ul>
+<li>Représentation : Ligne continue délimitant une zone en pointillés foncés indique la prévision modélisée d'une couche nuageuse couvrant plus  6/10 de la voûte céleste entre 6 500 et 24 000 pi au-dessus du niveau moyen de la mer.</li>
+</ul>
+</li>
+</ul>
+<h3 id="pointage">Pointage</h3>
+<p>Dans les régions pointillées, la base et le sommet des nuages sont pointés en milliers de pieds (12 = 12 000 pi) au dessus du niveau moyen de la mer.  Le chiffre du bas indique la base et le chiffre du haut indique le sommet. Les sommets supérieurs à 24 000 pi sont pointés 99.</p></div>
         </div>
 
         <footer class="col-md-12">

@@ -111,22 +111,15 @@
 <h2 id="data-location">Data location</h2>
 <p>MSC Datamart data can be <a href="../../../msc-datamart/amqp_en/">automatically retrieved with the Advanced Message Queuing Protocol (AMQP)</a> as soon as they become available. An <a href="../../../usage/readme_en/">overview and examples to access and use the Meteorological Service of Canada's open data</a> is also available.</p>
 <p>The data is available using the HTTP protocol and resides in a directory that is plainly accessible to a web browser. Visiting that directory with an interactive browser will yield a raw listing of links, each link being a downloadable GRIB2 file. In practice, we recommend writing your own script to automate the downloading of the desired data (using wget or equivalent). If you are unsure of how to proceed, you might like to take a look at our brief wget usage guide.</p>
-<p>The data can be accessed at the following URLs :</p>
+<p>The data can be accessed at the following URL:</p>
 <ul>
-<li>https://dd.weather.gc.ca/model_hrdps/continental/grib2/HH/hhh/</li>
-<li>https://dd.weather.gc.ca/model_hrdps/north/grib2/HH/hhh/</li>
-<li>https://dd.weather.gc.ca/model_hrdps/east/grib2/HH/hhh/</li>
-<li>https://dd.weather.gc.ca/model_hrdps/prairies/grib2/HH/hhh/</li>
-<li>https://dd.weather.gc.ca/model_hrdps/west/grib2/HH/hhh/</li>
-<li>https://dd.weather.gc.ca/model_hrdps/maritimes/grib2/HH/hhh/</li>
+<li>https://dd.weather.gc.ca/model_hrdps/domain/grib2/HH/hhh/</li>
 </ul>
 <p>where :</p>
 <ul>
-<li><strong>HH</strong> : Model run start, in UTC [00, 06, 12, 18].</li>
-<li><strong>hhh</strong> : Forecast hour [000, 001, 002, ..., 024] for Maritimes and East.</li>
-<li><strong>hhh</strong> : Forecast hour [000, 001, 002, ..., 042] for West.</li>
-<li><strong>hhh</strong> : Forecast hour [000, 001, 002, ..., 048] for Continental.</li>
-<li><strong>hhh</strong> : Forecast hour [000, 001, 002, ..., 048] for North at 00Z and 12Z.</li>
+<li><strong>domain</strong> : Constant string indicating the available domain [continental, north, east, prairies, west, maritimes]</li>
+<li><strong>HH</strong> : Model run start, in UTC [00, 06, 12, 18], except the North domain [00, 12]</li>
+<li><strong>hhh</strong> : Forecast hour [000, 001, 002, ..., 048] </li>
 </ul>
 <p>A 24-hour history is stored in this directory.</p>
 <h2 id="available-domains">Available Domains</h2>
@@ -397,7 +390,7 @@
 <h2 id="about-the-no-data-mask">About the No-data mask</h2>
 <p>Since October, 18th 2016, a mask called "No-data" has been added to our GRIB2 encoding process in order to better represent the areas where data are unavailable. This mask only concerns a few grid points with no data, always the same ones, located at the edge of the domain. Note that this mask has no negative effect on the product quality.</p>
 <h2 id="support">Support</h2>
-<p>If you have any questions about these data, please contact us at : <a href="mailto:ec.dps-client.ec@canada.ca">ec.dps-client.ec@canada.ca</a></p>
+<p>If you have any questions about these data, please contact us at: <a href="mailto:ec.dps-client.ec@canada.ca">ec.dps-client.ec@canada.ca</a></p>
 <h2 id="announcements-from-the-dd_info-mailing-list">Announcements from the dd_info mailing list</h2>
 <p>Announcements related to this dataset are available in the <a href="https://lists.ec.gc.ca/cgi-bin/mailman/listinfo/dd_info">dd_info list</a>.</p></div>
         </div>

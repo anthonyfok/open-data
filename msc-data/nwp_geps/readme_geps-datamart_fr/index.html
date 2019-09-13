@@ -109,10 +109,11 @@
 <p>Les données sont disponibles via le protocole HTTP. Il est possible d’y accéder avec un fureteur standard. Dans ce cas, on obtient une liste de liens donnant accès à un fichier GRIB2. Nous vous recommandons d’automatiser le téléchargement en le scriptant avec wget (lien externe, anglais) ou un programme équivalent. Pour plus d’information sur wget, consultez les notes d’utilisation.</p>
 <p>Les données sont accessibles aux adresses suivantes :</p>
 <ul>
-<li>https://dd.meteo.gc.ca/ensemble/geps/grib2/raw/HH/hhh/</li>
+<li>https://dd.meteo.gc.ca/ensemble/geps/grib2/TYPE/HH/hhh/</li>
 </ul>
 <p>où :</p>
 <ul>
+<li><strong>TYPE</strong> : Chaîne de caractères indiquant les membres individuels issus des sorties directes de modèle (pas de traitement) ou les produits probabilistes créés à partir des membres individuels [raw, products]</li>
 <li><strong>raw</strong> : Chaîne de caractères constante indiquant les sorties brutes du modèle</li>
 <li><strong>HH</strong> : Heure UTC du début de la passe du modèle [00, 12]</li>
 <li><strong>hhh</strong> : Heure de prévision [000, 003, 006, ..., 192, 198, 204, ..., 378, 384] et [000, 003, …, 192, 198, 204, ..., 762, 768] chaque jeudi à 000UTC</li>
@@ -150,7 +151,7 @@
 <p>Les fichiers ont la nomenclature suivante :</p>
 <ul>
 <li>CMC_geps-raw_Variable_TypedeNiveau_Niveau_latlonResolution_YYYYMMDDHH_Phhh_allmbrs.grib2</li>
-<li>CMC-geps-prob_Variable_TypedeNiveau_Niveau_latlonResolution_YYYYMMDDHH_Phhh_all-products.grib2</li>
+<li>CMC_geps-prob_Variable_TypedeNiveau_Niveau_latlonResolution_YYYYMMDDHH_Phhh_all-products.grib2</li>
 </ul>
 <p>où :</p>
 <ul>

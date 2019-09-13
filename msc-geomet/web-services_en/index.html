@@ -448,6 +448,7 @@ multipleValues=&quot;1&quot; nearestValue=&quot;0&quot;&gt;2019-06-11T00:00:00Z/
 &amp;TIME=2019-06-21T12:00:00Z&amp;DIM_REFERENCE_TIME=2019-06-12T00:00:00Z
 </code></pre>
 
+<p>Note that queries with time ranges or multiple time values are not currently supported on GeoMet for both <code>TIME</code> or <code>DIM_REFERENCE_TIME</code> parameters. Only single time queries are supported.</p>
 <h4 id="time-handling-differences-between-geomet-weather-and-geomet-climate">Time handling differences between GeoMet-Weather and GeoMet-Climate</h4>
 <p>It is important to mention that time is not handled in the same manner between GeoMet-Weather and GeoMet-Climate due to the different nature of the underlying data.</p>
 <p>In Geomet-Climate, time intervals are either yearly (YYYY) or monthly (YYYY-MM) depending on the queried layer. A WMS GetCapabilities request to GeoMet-Climate allows the client to properly identify the time dimension for a given layer.</p>

@@ -118,16 +118,22 @@
 <p>NOTE : ALL HOURS ARE IN UTC.</p>
 <p>File naming convention is :</p>
 <p>YYYYMMDD_HHMMZ_STORM-NAME.TYPE.shp</p>
-<p>where :
-* <strong>YYYYMMDD</strong> : Forecast issuance date
-* <strong>HHMM</strong> : Time in UTC 
-* <strong>Z</strong> : Constant string, indicating Zulu time (UTC code name)
-* <strong>STORM-NAME</strong> : Storm name (e.g. BERTHA - hurricane, post-tropical, etc)
-* <strong>TYPE</strong> : Type of shapefile:
-    * "pts" - The forecast locations (points) 
-    * "lin" - The line segments connecting forecast track points
-    * "rad" - Contains forecast wind radii information (wind quadrants)
-    * "err" - Contains information on track forecast error ("error cone")</p>
+<p>where :</p>
+<ul>
+<li><strong>YYYYMMDD</strong> : Forecast issuance date</li>
+<li><strong>HHMM</strong> : Time in UTC </li>
+<li><strong>Z</strong> : Constant string, indicating Zulu time (UTC code name)</li>
+<li><strong>STORM-NAME</strong> : Storm name (e.g. BERTHA - hurricane, post-tropical, etc)</li>
+<li>
+<p><strong>TYPE</strong> : Type of shapefile:</p>
+<ul>
+<li>"pts" - The forecast locations (points) </li>
+<li>"lin" - The line segments connecting forecast track points</li>
+<li>"rad" - Contains forecast wind radii information (wind quadrants)</li>
+<li>"err" - Contains information on track forecast error ("error cone")</li>
+</ul>
+</li>
+</ul>
 <h2 id="file-content">File content</h2>
 <p>When querying the points (pts) shapefile, the contents of each column are given
 as follows :</p>

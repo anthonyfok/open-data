@@ -447,6 +447,7 @@ multipleValues=&quot;1&quot; nearestValue=&quot;0&quot;&gt;2019-06-11T00:00:00Z/
 &amp;TIME=2019-06-21T12:00:00Z&amp;DIM_REFERENCE_TIME=2019-06-12T00:00:00Z
 </code></pre>
 
+<p>Notez que les requêtes avec des plages de temps ou des valeurs temporelles multiples ne sont pas actuellement prises en charge dans GeoMet pour les paramètres <code>TIME</code> ou <code>DIM_REFERENCE_TIME</code>. Seules les requêtes de temps ponctuelles sont supportées.</p>
 <h4 id="differences-entre-les-dimensions-temporelles-de-geomet-meteo-et-geomet-climat">Différences entre les dimensions temporelles de GeoMet-Météo et GeoMet-Climat</h4>
 <p>Il est important de considérer les différences dans la spécification du temps entre GeoMet-Météo et GeoMet-Climat, différences issues de la nature différente des données en cause.</p>
 <p>Dans GeoMet-Climat, les intervalles temporels sont soit annuels (YYYY) ou mensuels (YYYY-MM) selon la couche interrogée. Une requête WMS GetCapabilities sur les services GeoMet-Climat indique aux usagers quelles sont les dimensions temporelles disponibles pour un couche spécifique.</p>

@@ -118,15 +118,21 @@
 <p>NOTE : TOUTES LES HEURES SONT EN UTC.</p>
 <p>La convention régissant les noms de fichiers est la suivante :</p>
 <p>YYYYMMDD_HHMMZ_STORM-NAME.TYPE.shp</p>
-<p>où :
-* <strong>YYYYMMDD__HHMM</strong> : Date d'émission de la prévision (UTC).
-* <strong>Z</strong> : Chaîne de caractère constante indiquant le fuseau horaire Zulu (code pour UTC).
-* <strong>STORM-NAME</strong> : Nom de la tempête (p. ex. BERTHA - ouragan, post-tropical, etc.).
-* <strong>TYPE</strong> : Type de fichier shapefile :
-    * « pts » pour points, qui contient majoritairement des données/attributs
-    * « lin » pour les segments de ligne qui relient les points de suivi de la prévision
-    * « rad » pour les informations des rayons de prévisions de vent (quadrants)
-    * « err » pour les informations sur l'erreur de prévision de trajectoire (« cône d'erreur »)</p>
+<p>où :</p>
+<ul>
+<li><strong>YYYYMMDD__HHMM</strong> : Date d'émission de la prévision (UTC).</li>
+<li><strong>Z</strong> : Chaîne de caractère constante indiquant le fuseau horaire Zulu (code pour UTC).</li>
+<li><strong>STORM-NAME</strong> : Nom de la tempête (p. ex. BERTHA - ouragan, post-tropical, etc.).</li>
+<li>
+<p><strong>TYPE</strong> : Type de fichier shapefile :</p>
+<ul>
+<li>« pts » pour points, qui contient majoritairement des données/attributs</li>
+<li>« lin » pour les segments de ligne qui relient les points de suivi de la prévision</li>
+<li>« rad » pour les informations des rayons de prévisions de vent (quadrants)</li>
+<li>« err » pour les informations sur l'erreur de prévision de trajectoire (« cône d'erreur »)</li>
+</ul>
+</li>
+</ul>
 <h2 id="contenu-du-fichier">Contenu du fichier</h2>
 <p>Il y aura 2 types de fichiers, point et ligne.</p>
 <p>Lorsque l'utilisateur interroge le fichier shapefile par points, le contenu de
