@@ -171,7 +171,7 @@
 <li><strong>CRS</strong> - The coordinate reference system (CRS) used to create the map image. In both examples, we set the CRS to <code>EPSG:4326</code> (i.e. WGS 84), the coordinate reference system used for the Global Positioning System (GPS)</li>
 <li><strong>WIDTH</strong> - The width in pixels of the returned image</li>
 <li><strong>HEIGHT</strong> - The height in pixels of the returned image</li>
-<li><strong>LAYERS</strong> - The name of the layer used to create the image. The list and name of the available layers can be retrieved using a WMS GetCapabilities request</li>
+<li><strong>LAYERS</strong> - The name of the layer used to create the image. The list and name of the available layers can be retrieved using a WMS GetCapabilities request. For best performances, it is recommended to specify one layer per WMS GetMap request</li>
 <li><strong>FORMAT</strong> - The format of the image returned by the WMS GetMap request. In both cases case, the returned image will be in the PNG format</li>
 </ul>
 <p>For further information regarding these and other WMS GetMap parameters, refer to the <a href="../../msc-geomet/web-services_en/">technical MSC GeoMet web services documentation</a>.</p>
@@ -197,12 +197,12 @@
             source: new ol.source.TileWMS({
                 format: 'image/png',
                 url: 'https://geo.weather.gc.ca/geomet/',
-                params: {'LAYERS': 'RADAR_1KM_RDBR', 'TILED': true},
+                params: {'LAYERS': 'RADAR_1KM_RSNO', 'TILED': true},
             })
           })
         ],
         view: new ol.View({
-          center: ol.proj.fromLonLat([-97, 44]),
+          center: ol.proj.fromLonLat([-97, 57]),
           zoom: 3
         })
       });

@@ -173,35 +173,6 @@
 <p>This file originates from the Canadian Meteorological Center (CMC) and contains the raw data of the Global Ensemble Prediction System (CMC_geps-raw). The data in the file start on September 1st 2010 at 00Z (2010090100). It contains the U-component wind (UGRD) at the isobaric level 925 mb (ISBL_0925) for the forecast hour 78 (P078), for all members (allmbrs) in GRIB2 format (.grib2).</p>
 <h2 id="list-of-variables">List of variables</h2>
 <p>The variables for the ensemble products available in the GRIB2 files are listed below. For each variable, the definition, period and frequency are mentioned.</p>
-<p>For ensemble products:</p>
-<ul>
-<li><strong>FPRATE-Accum-12h_SFC_0</strong>    : Freezing rain accumulated over a 12h period : 12h-384h every 12h</li>
-<li><strong>FPRATE-Accum-24h_SFC_0</strong>    : Freezing rain accumulated over a 24h period : 24h-384h every 24h</li>
-<li><strong>HEATX-Max-24h_TGL_2m</strong>      : Humidex 2m above ground - Maximum over a 24h period : 24h-384h every 24h</li>
-<li><strong>HEATX_TGL_2m</strong>              : Humidex 2m above ground : 3-384h every 3h</li>
-<li><strong>HGT_ISBL_0500</strong>               : Geopotential height 500 hPa : 3-384h every 3h</li>
-<li><strong>IPRATE-Accum-12h_SFC_0</strong>    : Ice pellet accumulated over a 12h period : 12h-384h every 12h</li>
-<li><strong>IPRATE-Accum-24h_SFC_0</strong>    : Ice pellet accumulated over a 24h period : 24h-384h every 24h</li>
-<li><strong>PRMSL_MSL_0</strong>               : Mean sea level pressure : 3-384h every 3h</li>
-<li><strong>RPRATE-Accum-12h_SFC_0</strong>    : Rain accumulated over a 12h period : 12h-384h every 12h</li>
-<li><strong>RPRATE-Accum-24h_SFC_0</strong>    : Rain accumulated over a 24h period : 24h-384h every 24h</li>
-<li><strong>SPRATE-Accum-12h_SFC_0</strong>    : Snow (water equivalent) accumulated over a 12h period : 12h-384h every 12h</li>
-<li><strong>SPRATE-Accum-24h_SFC_0</strong>    : Snow (water equivalent) accumulated over a 24h period : 24h-384h every 24h</li>
-<li><strong>TCDC_SFC_0</strong>                : Cloud cover : 3-384h every 3h</li>
-<li><strong>TEMP-Max-24h_TGL_2m</strong>       : Temperature 2m above ground - Maximum over a 24h period : 24h-384h every 24h</li>
-<li><strong>TEMP-Min-24h_TGL_2m</strong>       : Temperature 2m above ground - Minimum over a 24h period : 24h-384h every 24h</li>
-<li><strong>TEMP_TGL_2m</strong>               : Temperature 2m above ground : 3-384h every 3h</li>
-<li><strong>TPRATE-Accum-120h_SFC_0</strong>   : Total precipitation accumulated over a 120h period : 120h-384h every 120h</li>
-<li><strong>TPRATE-Accum-12h_SFC_0</strong>    : Total precipitation accumulated over a 12h period : 12h-384h every 12h</li>
-<li><strong>TPRATE-Accum-24h_SFC_0</strong>   : Total precipitation accumulated over a 24h period : 24h-384h every 24h</li>
-<li><strong>TPRATE-Accum-48h_SFC_0</strong>    : Total precipitation accumulated over a 48h period : 48h-384h every 48h</li>
-<li><strong>TPRATE-Accum-72h_SFC_0</strong>    : Total precipitation accumulated over a 72h period : 72h-384h every 72h</li>
-<li><strong>TPRATE-Accum-96h_SFC_0</strong>    : Total precipitation accumulated over a 96h period : 96h-384h every 96h</li>
-<li><strong>WCF-Min-24h_TGL_2m</strong>        : Wind chill factor 2m above ground - Minimum over a 24h period : 24h-384h every 24h</li>
-<li><strong>WCF_TGL_2m</strong>               : Wind chill factor 2m above ground : 3-384h every 3h</li>
-<li><strong>WIND-Max-12h_TGL_10m</strong>      : Wind speed 10m above ground - Maximum over a 12h period : 12h-384h every 12h</li>
-<li><strong>WIND_TGL_10m</strong>              : Wind speed 10m above ground : 3-384h every 3h</li>
-</ul>
 <p>For individual members:</p>
 <ul>
 <li><strong>AFRAIN_SFC_0</strong>              : Freezing rain accumulation : 0-384h every 3h</li>
@@ -242,6 +213,43 @@
 <li><strong>VVEL_ISBL_XXXX</strong>            : Vertical velocity at XXXX hPa : 0-384h every 3h</li>
 <li><strong>WEASD_SFC_0</strong>               : Snow water equivalent at the surface : 0-384h every 3h</li>
 </ul>
+<p>For ensemble products:</p>
+<ul>
+<li><strong>FPRATE-Accum-12h_SFC_0</strong>    : Freezing rain accumulated over a 12h period : 12h-384h every 12h</li>
+<li><strong>FPRATE-Accum-24h_SFC_0</strong>    : Freezing rain accumulated over a 24h period : 24h-384h every 24h</li>
+<li><strong>HEATX-Max-24h_TGL_2m</strong>      : Humidex 2m above ground - Maximum over a 24h period : 24h-384h every 24h</li>
+<li><strong>HEATX_TGL_2m</strong>              : Humidex 2m above ground : 3-384h every 3h</li>
+<li><strong>HGT_ISBL_0500</strong>               : Geopotential height 500 hPa : 3-384h every 12h</li>
+<li><strong>IPRATE-Accum-12h_SFC_0</strong>    : Ice pellet accumulated over a 12h period : 12h-384h every 12h</li>
+<li><strong>IPRATE-Accum-24h_SFC_0</strong>    : Ice pellet accumulated over a 24h period : 24h-384h every 24h</li>
+<li><strong>PRMSL_MSL_0</strong>               : Mean sea level pressure : 3-384h every 12h</li>
+<li><strong>RPRATE-Accum-12h_SFC_0</strong>    : Rain accumulated over a 12h period : 12h-384h every 12h</li>
+<li><strong>RPRATE-Accum-24h_SFC_0</strong>    : Rain accumulated over a 24h period : 24h-384h every 24h</li>
+<li><strong>SPRATE-Accum-12h_SFC_0</strong>    : Snow (water equivalent) accumulated over a 12h period : 12h-384h every 12h</li>
+<li><strong>SPRATE-Accum-24h_SFC_0</strong>    : Snow (water equivalent) accumulated over a 24h period : 24h-384h every 24h</li>
+<li><strong>TCDC_SFC_0</strong>                : Cloud cover : 3-384h every 3h</li>
+<li><strong>TEMP-Max-24h_TGL_2m</strong>       : Temperature 2m above ground - Maximum over a 24h period : 24h-384h every 24h</li>
+<li><strong>TEMP-Min-24h_TGL_2m</strong>       : Temperature 2m above ground - Minimum over a 24h period : 24h-384h every 24h</li>
+<li><strong>TEMP_TGL_2m</strong>               : Temperature 2m above ground : 3-384h every 3h</li>
+<li><strong>TPRATE-Accum-120h_SFC_0</strong>   : Total precipitation accumulated over a 120h period : 120h-384h every 120h</li>
+<li><strong>TPRATE-Accum-12h_SFC_0</strong>    : Total precipitation accumulated over a 12h period : 12h-384h every 12h</li>
+<li><strong>TPRATE-Accum-24h_SFC_0</strong>   : Total precipitation accumulated over a 24h period : 24h-384h every 24h</li>
+<li><strong>TPRATE-Accum-48h_SFC_0</strong>    : Total precipitation accumulated over a 48h period : 48h-384h every 48h</li>
+<li><strong>TPRATE-Accum-72h_SFC_0</strong>    : Total precipitation accumulated over a 72h period : 72h-384h every 72h</li>
+<li><strong>TPRATE-Accum-96h_SFC_0</strong>    : Total precipitation accumulated over a 96h period : 96h-384h every 96h</li>
+<li><strong>WCF-Min-24h_TGL_2m</strong>        : Wind chill factor 2m above ground - Minimum over a 24h period : 24h-384h every 24h</li>
+<li><strong>WCF_TGL_2m</strong>               : Wind chill factor 2m above ground : 3-384h every 3h</li>
+<li><strong>WIND-Max-12h_TGL_10m</strong>      : Wind speed 10m above ground - Maximum over a 12h period : 12h-384h every 12h</li>
+<li><strong>WIND_TGL_10m</strong>              : Wind speed 10m above ground : 3-384h every 3h</li>
+</ul>
+<p>The files contain probability products by member counting above or below different thresholds, percentiles, means, medians and standard deviations. Note that products and thresholds are defined in the file metadata.</p>
+<p>For example, for the total precipitation accumulated over a 12-hour period (TPRATE-Accum-12h), we find the following products:</p>
+<ul>
+<li>Probability above 2.5, 5, 10, 15, 20, 25, 30, 40, 50, 75, 100 and 150 mm</li>
+<li>Minimum (0 percentile), maximum (100th percentile), median (50th percentile), standard deviation and mean</li>
+<li>Additional percentiles: 10,25,75 and 90 </li>
+</ul>
+<p>Note : An <a href="https://collaboration.cmc.ec.gc.ca/cmc/cmos/public_doc/msc-data/nwp_geps/geps_element.xml">XML list</a> containing information for all variables, including descriptions and units, in both French and English is available.</p>
 <h2 id="support">Support</h2>
 <p>If you have any questions about these data, please contact us at: <a href="mailto:ec.dps-client.ec@canada.ca">ec.dps-client.ec@canada.ca</a></p>
 <h2 id="announcements-from-the-dd_info-mailing-list">Announcements from the dd_info mailing list</h2>
