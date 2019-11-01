@@ -132,10 +132,12 @@
 <h1 id="services-web-geospatiaux">Services web géospatiaux</h1>
 <p>Les services web sont des protocoles élaborés pour supporter des interactions machine-à-machine sur un réseau et sont typiquement utilisés via un accès programmatique et les outils et applications associées dans un environnement informatique de type client/serveur.</p>
 <p>Les services web GeoMet du SMC implémentent les standards ouverts ratifiés par <a href="https://www.opengeospatial.org/">l'Open Geospatial Consortium (OGC)</a> et <a href="https://www.isotc211.org/">l'International Organization for Standardization (ISO)</a> qui rendent possible l'interopérabilité et ainsi simplifient la découverte, l'accès, la visualisation et l'intégration de données. Les standards de l'OGC et ISO jouent un rôle important pour <a href="https://www.wmo.int/pages/prog/www/WIS/documents/MOAWMO_OGC.pdf">l'interopérabilité au sein de l'Organisation étéorologique mondiale (OMM)</a> et le <a href="https://www.wmo.int/pages/prog/www/WIS/">WMO Information System</a>. Ces standards sont supportés par de nombreux logiciels libres et logiciels commerciaux.</p>
-<p>Les services web de l'OGC suivant sont supportés par GeoMet du SMC :
-* Web Map Service (WMS)
-* Web Coverage Service (WCS)
-* OGC API - Features (WFS 3)</p>
+<p>Les services web de l'OGC suivant sont supportés par GeoMet du SMC :</p>
+<ul>
+<li>Web Map Service (WMS)</li>
+<li>Web Coverage Service (WCS)</li>
+<li>OGC API - Features (WFS 3)</li>
+</ul>
 <h2 id="web-map-service-wms">Web Map Service (WMS)</h2>
 <p>Les requêtes effectuées avec le <a href="https://www.opengeospatial.org/standards/wms">standard Web Map Service (WMS)</a> de l'OGC permettent principalement aux usagers to récupérer des données géospatiales en tant que cartes. Les requêtes WMS sont effectuées via Internet (HTTP) et servent principalement à récupérer une image (e.g. JPEG, PNG) issue de données géospatiales pour une région d'intérêt donnée.</p>
 <p>Plusieurs types de requêtes WMS peuvent être spécifiés et celles-ci sont décrites ci-après.</p>
@@ -626,11 +628,11 @@ Rule%3E+%3C%2Fse%3AFeatureTypeStyle%3E+%3C%2FUserStyle%3E+%3C%2FNamedLayer%3E+%3
 </tr>
 <tr>
 <td>RESOLUTION=axis()</td>
-<td>La résolution spatiale pour chaque axe (pixel/unité) pour la donnée demandée. Si aucune valeur n'est spécifiée, la résolution spatiale de la donnée récupérée pourrait être différente de la donnée d'origine. Notez que les paramètres <code>RESOLUTION</code> et <code>SIZE</code> sont mutuellement exclusifs pour un axe et ne doivent pas être utilisés en même temps pour le même axe d'une requête</td>
+<td>La résolution spatiale pour chaque axe (pixel/unité) pour la donnée demandée. Si aucune valeur n'est spécifiée, la résolution spatiale de la donnée récupérée pourrait être différente de la donnée d'origine, il est donc recommandé de spécifier la resolution voulue dans la requête. Notez que les paramètres <code>RESOLUTION</code> et <code>SIZE</code> sont mutuellement exclusifs pour un axe et ne doivent pas être utilisés en même temps pour le même axe d'une requête</td>
 </tr>
 <tr>
 <td>SIZE=axis()</td>
-<td>Le nombre de pixels voulus pour un axe donné. Si aucune valeur n'est spécifiée, la grosseur de pixel de la donnée récupérée pourrait être différente de la donnée d'origine. Notez que les paramètres <code>RESOLUTION</code> et <code>SIZE</code> sont mutuellement exclusifs pour un axe et ne doivent pas être utilisés en même temps pour le même axe d'une requête</td>
+<td>Le nombre de pixels voulus pour un axe donné. Si aucune valeur n'est spécifiée, la grosseur de pixel de la donnée récupérée pourrait être différente de la donnée d'origine, il est donc recommandé de spécifier le nombre de pixels voulus dans la requête. Notez que les paramètres <code>RESOLUTION</code> et <code>SIZE</code> sont mutuellement exclusifs pour un axe et ne doivent pas être utilisés en même temps pour le même axe d'une requête</td>
 </tr>
 <tr>
 <td>INTERPOLATION</td>

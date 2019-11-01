@@ -135,6 +135,13 @@
 <a href="https://github.com/MetPX/sarracenia/blob/master/doc/subscriber.rst">https://github.com/MetPX/sarracenia/blob/master/doc/subscriber.rst</a></p>
 <p>Several examples of configuration files are also available to users, see:
 <a href="https://github.com/MetPX/sarracenia/tree/master/sarra/examples/subscribe">https://github.com/MetPX/sarracenia/tree/master/sarra/examples/subscribe</a></p>
+<p><strong>NOTE</strong>:</p>
+<p>To <strong>facilitate support</strong>, our analysts suggest that users identify themselves, in order to more easily track down queues in case of problems. It is therefore highly recommended to add one of the following lines in the sr_subscribe configuration:</p>
+<ul>
+<li>queue_name q_${BROKER_USER}.${PROGRAM}.${CONFIG}.${HOSTNAME} (dynamic option)</li>
+<li>q_anonymous.sr_subscribe.config_name.company_name (static option)</li>
+</ul>
+<p>Example: q_anonymous.sr_subscribe.citypage.companyX</p>
 <h2 id="examples">Examples</h2>
 <p>Here are some specific examples to receive alerts, citypage_weather data for one city and RDPS GRIB parameters</p>
 <ul>

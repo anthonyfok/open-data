@@ -131,6 +131,13 @@ Ce sujet est  : REPERTOIRE.DU.PRODUIT.SUR.LE.DATAMART</p>
 <p>Le guide d’installation peut être trouvé à cette adresse :  <a href="https://github.com/MetPX/sarracenia/blob/master/doc/fr/Install.rst">https://github.com/MetPX/sarracenia/blob/master/doc/fr/Install.rst</a></p>
 <p>Quant au guide d’utilisation, il est disponible ici :  <a href="https://github.com/MetPX/sarracenia/blob/master/doc/fr/subscriber.rst">https://github.com/MetPX/sarracenia/blob/master/doc/fr/subscriber.rst</a></p>
 <p>Plusieurs exemples de fichiers de configuration sont également mis à la disposition des usagers: <a href="https://github.com/MetPX/sarracenia/tree/master/sarra/examples/subscribe">https://github.com/MetPX/sarracenia/tree/master/sarra/examples/subscribe</a></p>
+<p><strong>NOTE</strong>:</p>
+<p><strong>Pour faciliter le support</strong>, il est suggéré aux usagers de s'identifier afin de retracer plus facilement les queues en cas de problèmes. Il est donc très fortement recommandé d'ajouter l'une des lignes suivantes dans la configuration de sr_subscribe:</p>
+<ul>
+<li>queue_name q_${BROKER_USER}.${PROGRAM}.${CONFIG}.${HOSTNAME}  (option dynamique)</li>
+<li>q_anonymous.sr_subscribe./nom_config/./nom_compagnie/ (option statique)</li>
+</ul>
+<p>Exemple : q_anonymous.sr_subscribe.citypage.compagnie</p>
 <h2 id="exemples">Exemples</h2>
 <p>Voici quelques exemples pour recevoir les alertes, les citypage_weather pour une ville et certains champs GRIB du SRPD</p>
 <ul>

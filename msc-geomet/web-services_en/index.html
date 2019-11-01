@@ -131,10 +131,12 @@
 <h1 id="geospatial-web-services">Geospatial Web Services</h1>
 <p>Web services are protocols designed to support machine to machine interaction over a network, and are typically utilized in a client/server computing environment made available through programmatic access, associated tools and applications.</p>
 <p>The MSC GeoMet web services adhere to open standards ratified by the <a href="https://www.opengeospatial.org/">Open Geospatial Consortium (OGC)</a>, and the <a href="https://www.isotc211.org/">International Organization for Standardization (ISO)</a> which enable interoperability and thus make data easy to discover, access, visualize and integrate. OGC and ISO standards play an important role in <a href="https://www.wmo.int/pages/prog/www/WIS/documents/MOAWMO_OGC.pdf">World Meteorological Organization interoperability</a> as part of the <a href="https://www.wmo.int/pages/prog/www/WIS/">WMO Information System</a> and are supported by numerous off the shelf open source or commercial tools.</p>
-<p>The following OGC web services are supported by MSC GeoMet:
-* Web Map Service (WMS)
-* Web Coverage Service (WCS)
-* OGC API - Features (WFS 3)</p>
+<p>The following OGC web services are supported by MSC GeoMet:</p>
+<ul>
+<li>Web Map Service (WMS)</li>
+<li>Web Coverage Service (WCS)</li>
+<li>OGC API - Features (WFS 3)</li>
+</ul>
 <h2 id="web-map-service-wms">Web Map Service (WMS)</h2>
 <p>Requests with the <a href="https://www.opengeospatial.org/standards/wms">OGC Web Map Service (WMS)</a> standard mainly enable a client to retrieve geospatial data as maps. WMS requests are made over the internet (HTTP) and are primarily used to retrieve an image (e.g. JPEG, PNG) of geospatial data for a given area of interest. </p>
 <p>The Web Map Service allows for several different types of request types, each of which are described in further detail below.</p>
@@ -638,11 +640,11 @@ like this:</p>
 </tr>
 <tr>
 <td>RESOLUTION=axis()</td>
-<td>Resolution (pixel/unit) per axis of the returned coverage to the user. If none is set, the coverage resolution returned might not be the one of the original data. Note that <code>RESOLUTION</code> and <code>SIZE</code> are mutually exclusive on one axis and should never be used for the same axis in the same request</td>
+<td>Resolution (pixel/unit) per axis of the returned coverage to the user. If none is set, the coverage resolution returned might not be the one of the original data, thus it is recommended to specify the spatial resolution in the request. Note that <code>RESOLUTION</code> and <code>SIZE</code> are mutually exclusive on one axis and should never be used for the same axis in the same request</td>
 </tr>
 <tr>
 <td>SIZE=axis()</td>
-<td>Size (pixel) per axis of the returned coverage to the user. If none is set, the coverage size returned might not be the one of the original data. Note that <code>RESOLUTION</code> and <code>SIZE</code> are mutually exclusive on one axis and should never be used for the same axis in the same request</td>
+<td>Size (pixel) per axis of the returned coverage to the user. If none is set, the coverage size returned might not be the one of the original data, thus it is recommended to specify the spatial resolution in the request. Note that <code>RESOLUTION</code> and <code>SIZE</code> are mutually exclusive on one axis and should never be used for the same axis in the same request</td>
 </tr>
 <tr>
 <td>INTERPOLATION</td>
