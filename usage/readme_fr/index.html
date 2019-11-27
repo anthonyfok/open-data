@@ -126,7 +126,7 @@
 <p>Les données ouvertes du SMC peuvent également être aisément intégrées dans des cartes interactives en-ligne ainsi que dans des applications mobiles.</p>
 <h4 id="dans-un-fureteur-web">Dans un fureteur web</h4>
 <p>En utilisant des librairies JavaScript telles que <a href="https://leafletjs.com/">Leaflet</a> et <a href="https://openlayers.org/">Openlayers</a>, parmi d'autres, les utilisateurs peuvent intégrer les couches disponibles de GeoMet du SMC dans leurs propres cartes interactives en-ligne.</p>
-<p>Ci-après est un exemple de carte interactive configurée avec OpenLayers et présentant la couche WMS de composite radar météo services par GeoMet du SMC.</p>
+<p>Ci-après est un exemple de carte interactive configurée avec OpenLayers et présentant des <a href="../../msc-data/obs_radar/readme_radar_geomet_fr/">couches WMS de la composite radar météo servies par GeoMet du SMC</a>.</p>
 <div id="map" style="height: 400px"></div>
 
 <h4 id="dans-une-application-mobile">Dans une application mobile</h4>
@@ -188,6 +188,13 @@
                 format: 'image/png',
                 url: 'https://geo.weather.gc.ca/geomet/',
                 params: {'LAYERS': 'RADAR_1KM_RSNO', 'TILED': true},
+            })
+          }),
+          new ol.layer.Tile({
+            source: new ol.source.TileWMS({
+                format: 'image/png',
+                url: 'https://geo.weather.gc.ca/geomet/',
+                params: {'LAYERS': 'RADAR_COVERAGE_RSNO.INV', 'TILED': true},
             })
           })
         ],

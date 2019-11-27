@@ -108,9 +108,13 @@
 <p>Les données sont disponibles via le protocole HTTP. Il est possible d’y accéder avec un fureteur standard. Dans ce cas, on obtient une liste de liens donnant accès à un fichier XML. Nous vous recommandons d’automatiser le téléchargement en le scriptant avec wget (lien externe, anglais) ou un programme équivalent. Pour plus d’information sur wget, consultez les notes d’utilisation.</p>
 <p>Les données sont disponibles aux adresses suivantes :</p>
 <ul>
-<li><strong>Observations terrestres :</strong></li>
+<li>
+<p><strong>Observations terrestres :</strong></p>
+</li>
+<li>
+<p><a href="https://dd.meteo.gc.ca/observations/swob-ml">https://dd.meteo.gc.ca/observations/swob-ml/{AAAAMMJJ}/{XXXX}/</a></p>
+</li>
 </ul>
-<p>https://dd.meteo.gc.ca/observations/swob-ml/AAAAMMJJ/XXXX/</p>
 <p>où :</p>
 <ul>
 <li><strong>AAAAMMJJ</strong> : Date des observations, UTC.</li>
@@ -122,7 +126,7 @@
 <ul>
 <li><strong>Observations marines :</strong></li>
 </ul>
-<p>https://dd.meteo.gc.ca/observations/swob-ml/marine/moored-buoys/YYYMMDD/XXXXXXX</p>
+<p>https://dd.meteo.gc.ca/observations/swob-ml/marine/moored-buoys/{YYYMMDD}/{XXXXXXX}</p>
 <p>où : </p>
 <ul>
 <li><strong>AAAAMMJJ</strong> : Date des observations, UTC.</li>
@@ -132,7 +136,7 @@
 <ul>
 <li><strong>Observations des partenaires</strong> :</li>
 </ul>
-<p>https://dd.meteo.gc.ca/observations/swob-ml/partners/NETWORK/YYYMMDD/MSC-ID</p>
+<p>https://dd.meteo.gc.ca/observations/swob-ml/partners/{NETWORK}/{YYYMMDD}/{MSC-ID}</p>
 <p>où : </p>
 <ul>
 <li><strong>NETWORK</strong> : Acronyme du réseau des partenaires.</li>

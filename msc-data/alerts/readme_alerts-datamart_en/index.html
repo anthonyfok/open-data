@@ -107,14 +107,14 @@
 <p>MSC Datamart data can be <a href="../../../msc-datamart/amqp_en/">automatically retrieved with the Advanced Message Queuing Protocol (AMQP)</a> as soon as they become available. An <a href="../../../usage/readme_en/">overview and examples to access and use the Meteorological Service of Canada's open data</a> is also available.</p>
 <p>The data is available using the HTTP protocol and resides in a directory that is plainly accessible to a web browser. Visiting that directory with an interactive browser will yield a raw listing of links, each link being a downloadable XML file. In practice, we recommend writing your own script to automate the downloading of the desired data (using wget or equivalent). If you are unsure of how to proceed, you might like to take a look at our brief wget usage guide.</p>
 <p>The <strong>data can be accessed</strong> at the following URLs:</p>
-<p>https://dd.weather.gc.ca/alerts/cap/EEEE/hh/</p>
+<p><a href="https://dd.weather.gc.ca/alerts/cap">https://dd.weather.gc.ca/alerts/cap/{YYYYMMDD}/{EEEE}/{hh}/</a></p>
 <p>A 30-day history is kept in this directory.</p>
 <p>where:</p>
 <ul>
-<li>YYYYMMDD: warning transmission day.</li>
-<li>EEEE: 4 letters for the responsible office code except LAND or WATR for tornado warning and severe thunderstorm warning alerts.</li>
+<li><strong>YYYYMMDD</strong>: warning transmission day.</li>
+<li><strong>EEEE</strong>: 4 letters for the responsible office code except LAND or WATR for tornado warning and severe thunderstorm warning alerts.</li>
 <li>
-<p>hh: warning transmission hour.</p>
+<p><strong>hh</strong>: warning transmission hour.</p>
 </li>
 <li>
 <p>The CAP-XML are grouped in a directory tree that is based on the date and the responsible office (see note1) code for the alert. The exception is for tornado warning and severe thunderstorm warning alerts which are grouped based on a LAND or WATR (see note2) designation rather than responsible office. </p>
@@ -131,7 +131,7 @@
 </ul>
 <p>A history of 1 month is maintained in this directory.</p>
 <p>A <strong>standardized package of GIS (Geographical Information System) based forecast location shapefiles</strong>, for all the forecast locations used in ECCC CAP Messages, are available at the following address:</p>
-<p>https://dd.weather.gc.ca/meteocode/geodata/</p>
+<p><a href="https://dd.weather.gc.ca/meteocode/geodata/">https://dd.weather.gc.ca/meteocode/geodata/</a></p>
 <p>Shapefile packages found there are the same Shapefiles that are used in the operational environment where ECCC warnings are initially generated. The Shapefile packages are versioned in order to track the available packages to the package used in the operational environment at any given time. Beginning with version 5.0.3 of the GIS package, usage dates for the package will be included in the documentation.</p>
 <h2 id="file-name-nomenclature">File name nomenclature</h2>
 <p>NOTE: ALL HOURS ARE IN UTC.</p>

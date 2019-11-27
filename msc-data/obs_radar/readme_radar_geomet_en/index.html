@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../../img/favicon.ico">
-        <title>Readme marine weather datamart en - MSC Open Data / Données ouvertes du SMC</title>
+        <title>Readme radar geomet en - MSC Open Data / Données ouvertes du SMC</title>
         <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../../css/base.css" rel="stylesheet">
@@ -88,74 +88,103 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#data-of-the-marine-weather-forecasts">Data of the marine weather forecasts</a></li>
-            <li><a href="#data-location">Data location</a></li>
-            <li><a href="#file-name-nomenclature">File name nomenclature</a></li>
+        <li class="main active"><a href="#available-weather-radar-data-on-msc-geomet">Available weather radar data on MSC GeoMet</a></li>
+            <li><a href="#access-to-the-geospatial-web-services">Access to the geospatial web services</a></li>
+            <li><a href="#usage">Usage</a></li>
             <li><a href="#support">Support</a></li>
-            <li><a href="#announcements-from-the-dd_info-mailing-list">Announcements from the dd_info mailing list</a></li>
+            <li><a href="#announcement-mailing-list">Announcement mailing list</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<p><a href="../readme_marine-weather-datamart_fr/">En français</a></p>
+<p><a href="../readme_radar_geomet_fr/">En français</a></p>
 <p><img alt="ECCC logo" src="../../../img_eccc-logo.png" /></p>
-<p><a href="../../../readme_en/">TOC</a> &gt; <a href="../../readme_en/">MSC data</a> &gt; <a href="../readme_marine-weather_en/">Marine weather</a> &gt; Marine weather on MSC Datamart</p>
-<h1 id="data-of-the-marine-weather-forecasts">Data of the marine weather forecasts</h1>
-<p>This page describes the data of the <a href="../readme_marine-weather_en/">marine weather</a> forecasts available on the MSC Datamart.</p>
-<p>The XML files contain the weather forecast, marine weather warnings (warning and watch), ice alerts and the end of season announcement. They are updated two to four times a day, or more often in the case of amendments, marine weather warnings (alert or watch) or ice warnings.</p>
-<p>The <a href="https://www.canada.ca/en/environment-climate-change/services/general-marine-weather-information/publications/guide-forecasts.html">Environment and Climate Change Canada's guide to the marine forecast</a> includes information on the issuing time of forecasts, time period covered by forecast, determination of forecast regions, forecast time period terminology, information included in the forecast, and forecast revision.</p>
-<p><strong>Notes</strong>:</p>
+<p><a href="../../../readme_en/">TOC</a> &gt; <a href="../../readme_en/">MSC data</a> &gt; <a href="../readme_radar_en/">Radar</a> &gt; Radar data on MSC GeoMet</p>
+<h1 id="available-weather-radar-data-on-msc-geomet">Available weather radar data on MSC GeoMet</h1>
+<p>MSC GeoMet provides access to several popular North American weather radar composite layers. Users can build mobile apps, create interactive web maps, or display and animate weather radar layers in desktop software.</p>
+<h2 id="access-to-the-geospatial-web-services">Access to the geospatial web services</h2>
+<p>The weather radar layers are available on GeoMet-Weather via the Web Map Service (WMS) standard:</p>
 <ul>
-<li>
-<p>The marine XML files do not include ice forecast information, but do include <a href="https://www.canada.ca/en/environment-climate-change/services/ice-forecasts-observations/latest-conditions/products-guides/iceberg-bulletin-overview.html#warnings">ice alert information</a>.</p>
-</li>
-<li>
-<p>Ice forecast information can be found on the <a href="https://www.canada.ca/en/environment-climate-change/services/ice-forecasts-observations.html">Environment and Climate Change Canada web site</a> and on the <a href="https://www.canada.ca/fr/environnement-changement-climatique/services/previsions-observations-glaces/conditions-glaces-plus-recentes.html">Canadian Ice Service</a> web site.</p>
-</li>
+<li><a href="../../../msc-geomet/readme_en/">Access to GeoMet-Weather</a></li>
+<li><a href="../../../msc-geomet/web-services_en/">Technical documentation on MSC GeoMet geospatial web services</a></li>
 </ul>
-<h2 id="data-location">Data location</h2>
-<p>MSC Datamart data can be <a href="../../../msc-datamart/amqp_en/">automatically retrieved with the Advanced Message Queuing Protocol (AMQP)</a> as soon as they become available. An <a href="../../../usage/readme_en/">overview and examples to access and use the Meteorological Service of Canada's open data</a> is also available.</p>
-<p>The data is available via the HTTP protocol. It is possible to access it with a standard browser. In this case, we obtain a list of links giving access to a XML file.</p>
-<p><strong>The marine weather XML files</strong> are available according to Canadian marine regions, at the following address :</p>
-<p><a href="https://dd.weather.gc.ca/marine_weather/xml">https://dd.weather.gc.ca/marine_weather/xml/{REGION}</a></p>
-<p>where :</p>
-<p><strong>REGION</strong> : name of the region covered by the forecast.The region name is one of the 8 following values:</p>
+<p>Example of a web map configured to display the weather radar composite using WMS layers served by MSC GeoMet:</p>
+<div id="map" style="height: 400px"></div>
+
+<p>MSC GeoMet's North American weather radar composite layers can be seen in action in ECCC's <a href="https://www.canada.ca/en/environment-climate-change/services/weather-general-tools-resources/weathercan.html">WeatherCAN mobile app</a>.</p>
+<h2 id="usage">Usage</h2>
+<p>The <a href="../../../usage/readme_en/">usage overview page</a> provides generic information on using these services with desktop software, mobile apps, interactive web maps and direct access. Please refer to the <a href="../../../msc-geomet/web-services_en/">technical documentation on MSC GeoMet geospatial web services</a> for detailed information. See also the <a href="../readme_radar_en/">main weather radar data page</a> which links to additional information on weather radar.</p>
+<h3 id="available-layers">Available layers</h3>
+<p>Weather radar layers are updated every 10 minutes. The last 3 hours of data is available on MSC GeoMet. </p>
+<p>North-American weather radar composite at 1 km:</p>
 <ul>
-<li>arctic</li>
-<li>atlantic</li>
-<li>great_lakes</li>
-<li>hudson</li>
-<li>mackenzie</li>
-<li>pacific</li>
-<li>prairies</li>
-<li>st_lawrence</li>
+<li>Radar precipitation rate (Rain) (1 km) [mm/hr], ID: <code>RADAR_1KM_RRAI</code></li>
+<li>Radar precipitation rate (Snow) (1 km) [cm/hr], ID: <code>RADAR_1KM_RSNO</code></li>
+<li>Radar reflectivity (Rain) (1 km) [dBZ], ID: <code>RADAR_1KM_RDBR</code></li>
+<li>Corresponding dynamic radar coverage layers:<ul>
+<li>Coverage for Rain, ID: <code>RADAR_COVERAGE_RRAI</code>. ID for inverted style: <code>RADAR_COVERAGE_RRAI.INV</code></li>
+<li>Coverage for Snow, ID: <code>RADAR_COVERAGE_RSNO</code>. ID for inverted style: <code>RADAR_COVERAGE_RSNO.INV</code></li>
 </ul>
-<p><a href="https://collaboration.cmc.ec.gc.ca/cmc/cmos/public_doc/msc-data/marine-weather/marine_tags_table_e.csv"><strong>Tables describing each of the marine weather XML element tags and their associated attributes</strong></a> are available.</p>
-<p>The <strong>XML schemas</strong> for marine weather data are found in this directory :</p>
-<p>https://dd.weather.gc.ca/marine_weather/schema/</p>
-<h2 id="file-name-nomenclature">File name nomenclature</h2>
-<p>NOTE : ALL HOURS ARE IN UTC.</p>
-<p>The file names have the following nomenclature :</p>
-<p>RegionNameCode_L.xml</p>
-<p>where :</p>
-<ul>
-<li><strong>RegionNameCode</strong> : Site code used in the marine region list (see URL below).</li>
-<li><strong>L</strong> : Single letter indicating the language of the file. Can be either : f (French) or e (English)</li>
-</ul>
-<p>Examples of file name :</p>
-<ul>
-<li>
-<p>m0000001_e.xml - English marine weather XML for area Tuktoyaktuk.</p>
-</li>
-<li>
-<p>m0000001_f.xml - French marine weather XML for area Tuktoyaktuk.</p>
 </li>
 </ul>
-<p>A <a href="https://collaboration.cmc.ec.gc.ca/cmc/cmos/public_doc/msc-data/marine-weather/marine_region_list_en.csv"><strong>list with location names and RegionNameCodes</strong></a> is available.</p>
+<p>North-American weather radar composite at 4 km:</p>
+<ul>
+<li>Radar precipitation rate (Rain) (4 km) [mm/hr], ID: <code>RADAR_RRAI</code></li>
+<li>Radar precipitation rate (Snow) (4 km) [cm/hr], ID: <code>RADAR_RSNO</code></li>
+<li>Radar reflectivity (Rain) (4 km) [dBZ], ID: <code>RADAR_RDBR</code></li>
+<li>Radar reflectivity (Snow) (4 km) [dBZ], ID: <code>RADAR_RDBS</code></li>
+</ul>
+<h3 id="usage-tips">Usage tips</h3>
+<p>Retrieving the list of latest radar layer timesteps available:</p>
+<ul>
+<li>Users can use <code>&amp;layer=</code> in WMS GetCapabilities requests to point to a specific layer and retrieve a smaller XML payload with up-to-date temporal dimensions. Example for the 1km radar snow layer: <a href="https://geo.weather.gc.ca/geomet?service=WMS&amp;version=1.3.0&amp;request=GetCapabilities&amp;layer=RADAR_1KM_RSNO">https://geo.weather.gc.ca/geomet?service=WMS&amp;version=1.3.0&amp;request=GetCapabilities&amp;layer=RADAR_1KM_RSNO</a></li>
+<li>Additional information is available in the <a href="../../msc-geomet/web-services_en/#handling-time">handling time with WMS section</a></li>
+</ul>
+<p>WMS styles:</p>
+<ul>
+<li>In addition to the default WMS style, several alternative WMS styles with different color scales are available. The list of available WMS styles is provided in the WMS GetCapabilities response</li>
+<li>Furthermore, users can request layers with their own custom styles with the Styled Layer Descriptor (SLD) standard, please refer to the <a href="../../msc-geomet/web-services_en/#handling-styles">SLD technical documentation</a></li>
+</ul>
+<p>Legends:</p>
+<ul>
+<li>Legends are available for every WMS style. Details are provided in <a href="../../msc-geomet/web-services_en/#wms-getlegendgraphic">the WMS legend technical documentation</a></li>
+<li>Legend retrieval request example: <code>https://geo.weather.gc.ca/geomet?version=1.3.0&amp;service=WMS&amp;request=GetLegendGraphic&amp;sld_version=1.1.0&amp;layer=RADAR_1KM_RRAI&amp;format=image/png&amp;STYLE=RADARURPPRECIPR14-LINEAR</code></li>
+</ul>
+<p><img alt="The RADARURPPRECIPR14-LINEAR WMS legend" src="https://geo.weather.gc.ca/geomet?version=1.3.0&amp;service=WMS&amp;request=GetLegendGraphic&amp;sld_version=1.1.0&amp;layer=RADAR_1KM_RRAI&amp;format=image/png&amp;STYLE=RADARURPPRECIPR14-LINEAR" /></p>
 <h2 id="support">Support</h2>
-<p>If you have any questions about these data, please contact us at : <a href="mailto:ec.dps-client.ec@canada.ca">ec.dps-client.ec@canada.ca</a></p>
-<h2 id="announcements-from-the-dd_info-mailing-list">Announcements from the dd_info mailing list</h2>
-<p>Announcements related to this dataset are available in the <a href="https://lists.ec.gc.ca/cgi-bin/mailman/listinfo/dd_info">dd_info list</a>.</p></div>
+<p>The MSC GeoMet services are operational 24/7. User support is provided on a best-effort basis during normal business hours. If you have any questions about these services, please <a href="https://weather.gc.ca/mainmenu/contact_us_e.html">contact us</a>.</p>
+<h2 id="announcement-mailing-list">Announcement mailing list</h2>
+<p>We encourage users to subscribe to the <a href="https://lists.ec.gc.ca/cgi-bin/mailman/listinfo/geomet-info">GeoMet-Info</a> announcement mailing list to be informed of enhancements and changes to the MSC GeoMet services.</p>
+<p><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.6.5/ol.css" integrity="sha256-rQq4Fxpq3LlPQ8yP11i6Z2lAo82b6ACDgd35CKyNEBw=" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.6.5/ol.js" integrity="sha256-77IKwU93jwIX7zmgEBfYGHcmeO0Fx2MoWB/ooh9QkBA=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+      var map = new ol.Map({
+        target: 'map',
+        layers: [
+          new ol.layer.Tile({
+            source: new ol.source.OSM()
+          }),
+          new ol.layer.Tile({
+            source: new ol.source.TileWMS({
+                format: 'image/png',
+                url: 'https://geo.weather.gc.ca/geomet/',
+                params: {'LAYERS': 'RADAR_1KM_RSNO', 'TILED': true},
+            })
+          }),
+          new ol.layer.Tile({
+            source: new ol.source.TileWMS({
+                format: 'image/png',
+                url: 'https://geo.weather.gc.ca/geomet/',
+                params: {'LAYERS': 'RADAR_COVERAGE_RSNO.INV', 'TILED': true},
+            })
+          })
+        ],
+        view: new ol.View({
+          center: ol.proj.fromLonLat([-97, 57]),
+          zoom: 3
+        })
+      });
+</script></p></div>
         </div>
 
         <footer class="col-md-12">

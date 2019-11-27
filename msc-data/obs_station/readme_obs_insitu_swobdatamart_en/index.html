@@ -108,21 +108,25 @@
 <p>The data is available using the HTTP protocol and resides in a directory that is plainly accessible to a web browser. Visiting that directory with an interactive browser will yield a raw listing of links, each link being a downloadable XML file. In practice, we recommend writing your own script to automate the downloading of the desired data (using wget or equivalent). If you are unsure of how to proceed, you might like to take a look at our brief wget usage guide.</p>
 <p>Data are available at the following addresses :</p>
 <ul>
-<li><strong>Land-based observations :</strong></li>
+<li>
+<p><strong>Land-based observations :</strong></p>
+</li>
+<li>
+<p><a href="https://dd.weather.gc.ca/observations/swob-ml">https://dd.weather.gc.ca/observations/swob-ml/{YYYYMMDD}/{XXXX}/</a></p>
+</li>
 </ul>
-<p>https://dd.weather.gc.ca/observations/swob-ml/YYYYMMDD/XXXX/</p>
 <p>where :</p>
 <ul>
 <li><strong>YYYYMMDD</strong> : Observation date in UTC. </li>
 <li><strong>XXXX</strong> : Station code (WMO ID).</li>
 </ul>
 <p>Moreover, there is a special directory containing the last observations received from each station :
-https://dd.weather.gc.ca/observations/swob-ml/latest/</p>
+<a href="https://dd.weather.gc.ca/observations/swob-ml/latest/">https://dd.weather.gc.ca/observations/swob-ml/latest/</a></p>
 <p><strong>Note</strong>: A <a href="https://dd.meteo.gc.ca/observations/doc/swob-xml_station_list.csv">dynamic list of observation stations</a> is available and updated daily.</p>
 <ul>
 <li><strong>Marine observations :</strong></li>
 </ul>
-<p>https://dd.weather.gc.ca/observations/swob-ml/marine/moored-buoys/YYYMMDD/XXXXXXX</p>
+<p>https://dd.weather.gc.ca/observations/swob-ml/marine/moored-buoys/{YYYMMDD}/{XXXXXXX}</p>
 <p>where :</p>
 <ul>
 <li><strong>YYYYMMDD</strong> : Observation date in UTC.</li>
@@ -132,7 +136,7 @@ https://dd.weather.gc.ca/observations/swob-ml/latest/</p>
 <ul>
 <li><strong>Partner observations :</strong></li>
 </ul>
-<p>https://dd.weather.gc.ca/observations/swob-ml/partners/NETWORK/YYYMMDD/MSC-ID</p>
+<p>https://dd.weather.gc.ca/observations/swob-ml/partners/{NETWORK}/{YYYMMDD}/{MSC-ID}</p>
 <p>where :</p>
 <ul>
 <li><strong>NETWORK</strong> : Acronym of partner's network.</li>

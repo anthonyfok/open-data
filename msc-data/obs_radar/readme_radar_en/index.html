@@ -88,10 +88,9 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#data-and-products-for-radar-observations">Data and products for radar observations</a></li>
+        <li class="main active"><a href="#data-and-products-for-weather-radar-observations">Data and products for weather radar observations</a></li>
             <li><a href="#access">Access</a></li>
             <li><a href="#technical-documentation">Technical documentation</a></li>
-            <li><a href="#change-log">Change log</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
@@ -99,29 +98,59 @@
 <p><a href="../readme_radar_fr/">En français</a></p>
 <p><img alt="ECCC logo" src="../../../img_eccc-logo.png" /></p>
 <p><a href="../../../readme_en/">TOC</a> &gt; <a href="../../readme_en/">MSC data</a> &gt; Radar imagery</p>
-<h1 id="data-and-products-for-radar-observations">Data and products for radar observations</h1>
-<p>This page describes the data and products of the canadian radars of the Environment and Climate Change Canada's network containing 31 sites concentrated in the most populated parts of Canada, providing radar coverage to more than 95 per cent of Canadians. The network’s primary purpose is the early detection of developing thunderstorms and high impact weather, as well the tracking of precipitation.</p>
+<h1 id="data-and-products-for-weather-radar-observations">Data and products for weather radar observations</h1>
+<p>This page describes the data and products available for Environment and Climate Change Canada's weather radar network. The network is comprised of 31 sites concentrated in the most populated parts of Canada, and provides radar coverage to more than 95 per cent of Canadians. The network’s primary purpose is the early detection of developing thunderstorms and high impact weather, as well the tracking of precipitation.</p>
 <h2 id="access">Access</h2>
 <h3 id="how-to-access-the-data">How to access the data</h3>
-<p>These data are available on the data server services <a href="../../../msc-datamart/readme_en/">MSC Datamart</a> and the web services <a href="../../../msc-geomet/readme_en/">MSC GeoMet</a> respectively :</p>
+<p>Weather radar data is available as georeferenced images on the <a href="../../../msc-geomet/readme_en/">MSC GeoMet</a> web map services as well as static GIF images on the <a href="../../../msc-datamart/readme_en/">MSC Datamart</a>:</p>
 <ul>
-<li><a href="../readme_radarimage-datamart_en/">GIF radar imagery available on the MSC Datamart</a> </li>
-<li><a href="../../../msc-geomet/readme_en/">Data available via geospatial web services GeoMet-Weather</a></li>
+<li><a href="../readme_radar_geomet_en/">North-American radar composite layers</a> available via geospatial web services on GeoMet-Weather</li>
+<li><a href="../readme_radarimage-datamart_en/">GIF radar imagery</a> available on the MSC Datamart </li>
 </ul>
-<p>An <a href="../../../usage/readme_en/">overview and examples to access and use the Meteorological Service of Canada's open data</a> is available.</p>
+<p>An <a href="../../../usage/readme_en/">overview and examples on how to access and use the Meteorological Service of Canada's open data</a> is available. Example of a web map configured to display weather radar composite Web Map Service (WMS) layers served by MSC GeoMet:</p>
+<div id="map" style="height: 400px"></div>
+
 <h3 id="licence">Licence</h3>
-<p>The <a href="../../../licence/readme_en/">end-user licence for Environment and Climate Change Canada's data servers</a> specifies the conditions of use of these data.</p>
+<p>The <a href="../../../licence/readme_en/">end-user licence for Environment and Climate Change Canada's data servers</a> specifies the conditions of use for this data.</p>
 <h3 id="metadata">Metadata</h3>
-<p>Not available.</p>
+<p>Not yet available.</p>
 <h2 id="technical-documentation">Technical documentation</h2>
 <ul>
-<li><a href="https://www.canada.ca/en/environment-climate-change/services/weather-general-tools-resources/radar-overview/about.html">About radars</a></li>
-<li><a href="https://weather.gc.ca/radar/how-to-use_e.html">Weather radars : how to use</a></li>
-<li><a href="https://www.canada.ca/en/environment-climate-change/services/weather-general-tools-resources/radar-overview/modernizing-network.html">Canada's weather-radar network replacing</a></li>
+<li><a href="https://www.canada.ca/en/environment-climate-change/services/weather-general-tools-resources/radar-overview/about.html">About radar</a></li>
+<li><a href="https://weather.gc.ca/radar/how-to-use_e.html">Weather radars: how to use</a></li>
+<li><a href="https://www.canada.ca/en/environment-climate-change/services/weather-general-tools-resources/radar-overview/modernizing-network.html">Modernizing Canada's weather-radar network</a></li>
 <li><a href="https://www.canada.ca/en/environment-climate-change/services/weather-general-tools-resources/radar-overview/outages-maintenance.html">Radar outages and maintenance</a></li>
 </ul>
-<h2 id="change-log">Change log</h2>
-<p>Does not apply.</p></div>
+<p><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.6.5/ol.css" integrity="sha256-rQq4Fxpq3LlPQ8yP11i6Z2lAo82b6ACDgd35CKyNEBw=" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.6.5/ol.js" integrity="sha256-77IKwU93jwIX7zmgEBfYGHcmeO0Fx2MoWB/ooh9QkBA=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+      var map = new ol.Map({
+        target: 'map',
+        layers: [
+          new ol.layer.Tile({
+            source: new ol.source.OSM()
+          }),
+          new ol.layer.Tile({
+            source: new ol.source.TileWMS({
+                format: 'image/png',
+                url: 'https://geo.weather.gc.ca/geomet/',
+                params: {'LAYERS': 'RADAR_1KM_RSNO', 'TILED': true},
+            })
+          }),
+          new ol.layer.Tile({
+            source: new ol.source.TileWMS({
+                format: 'image/png',
+                url: 'https://geo.weather.gc.ca/geomet/',
+                params: {'LAYERS': 'RADAR_COVERAGE_RSNO.INV', 'TILED': true},
+            })
+          })
+        ],
+        view: new ol.View({
+          center: ol.proj.fromLonLat([-97, 57]),
+          zoom: 3
+        })
+      });
+</script></p></div>
         </div>
 
         <footer class="col-md-12">

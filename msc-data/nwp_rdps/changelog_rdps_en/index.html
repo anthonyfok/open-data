@@ -265,17 +265,21 @@ Summary of the major changes included in this upgrade:</p>
 <h3 id="improvements-to-the-regional-deterministic-prediction-system-rdps-v-200-of-the-canadian-meteorological-centre">Improvements to the Regional Deterministic Prediction System (RDPS v 2.0.0) of the Canadian Meteorological Centre</h3>
 <p>Starting on November 16 2011 at 06 UTC, the Canadian Meteorological Centre (CMC) will implement changes to the regional data assimilation system by incorporating additional satellite data and by introducing a higher quality analysis of the sea surface temperature.</p>
 <p>Here is an overview of changes involving the regional data assimilation system:</p>
-<p>A. New Satellite Data: The following satellite data will be incorporated in the global and regional data assimilation systems:
-* Sixty-two (62) infrared channels from the IASI instrument on board the METOP satellite.
-* Seven (7) microwave channels from the SSM/IS instrument on board the DMSP F16 satellite.
-* One (1) water vapor channel from the GOES-W, METSAT-1R and both METEOSAT satellites.
-* A restriction to the infrared channels of the AIRS instrument in the polar regions will be removed.
-* The horizontal thinning of all satellite radiance data, currently done at 250 km (except 200 km for SSM/I) will be reduced to 150 km, therefore adding much more satellite data to the systems.</p>
-<p>B. Other Assimilation Changes:
-* Moisture observations measured from properly equipped aircraft (AMDAR) will be assimilated.
-* A new satellite data bias correction scheme will replace the current one. The main impact is the reduction of the time period to compute the bias corrections from 15 to 7 days. the same code is used for all radiance data.
-* A modified version of the RTTOV radiative transfer code will be used for satellite radiance data.
-* Also, a new sea surface temperature analysis on a grid of 0.20 degrees resolution will be used now by the regional system.</p>
+<p>A. New Satellite Data: The following satellite data will be incorporated in the global and regional data assimilation systems:</p>
+<ul>
+<li>Sixty-two (62) infrared channels from the IASI instrument on board the METOP satellite.</li>
+<li>Seven (7) microwave channels from the SSM/IS instrument on board the DMSP F16 satellite.</li>
+<li>One (1) water vapor channel from the GOES-W, METSAT-1R and both METEOSAT satellites.</li>
+<li>A restriction to the infrared channels of the AIRS instrument in the polar regions will be removed.</li>
+<li>The horizontal thinning of all satellite radiance data, currently done at 250 km (except 200 km for SSM/I) will be reduced to 150 km, therefore adding much more satellite data to the systems.</li>
+</ul>
+<p>B. Other Assimilation Changes:</p>
+<ul>
+<li>Moisture observations measured from properly equipped aircraft (AMDAR) will be assimilated.</li>
+<li>A new satellite data bias correction scheme will replace the current one. The main impact is the reduction of the time period to compute the bias corrections from 15 to 7 days. the same code is used for all radiance data.</li>
+<li>A modified version of the RTTOV radiative transfer code will be used for satellite radiance data.</li>
+<li>Also, a new sea surface temperature analysis on a grid of 0.20 degrees resolution will be used now by the regional system.</li>
+</ul>
 <p>All of the above changes were combined and tested extensively during winter and summer seasons, including a parallel run of the global system. The data assimilation changes were also tested in the regional system over similar test periods, including a parallel run.</p>
 <p>A copy of the text of the official note which includes additional information on the evaluation of these changes is available <a href="http://dd.weatheroffice.ec.gc.ca/doc/genots/2011/11/15/NOCN03_CWAO_152020___05806">by clicking here</a>.</p>
 <p>With these changes the RDPS is now version 2.0.0</p></div>
