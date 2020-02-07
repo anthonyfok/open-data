@@ -124,7 +124,7 @@
 <h2 id="domaine-disponible">Domaine disponible</h2>
 <h3 id="specification-technique-de-la-grille-ouest">Spécification technique de la grille ouest</h3>
 <p><img alt="Image de la grille du ouest 1 km du SHRPD" src="https://collaboration.cmc.ec.gc.ca/cmc/cmos/public_doc/msc-data/nwp_hrdps/grille_hrdps1km_west.png" /></p>
-<p>Valeurs données aux paramètres de la grille polaire stéréographique ouest.</p>
+<p>Valeurs données aux paramètres de la grille lat-lon tournée sur le domaine ouest.</p>
 <table>
 <thead>
 <tr>
@@ -151,10 +151,11 @@
 </tr>
 </tbody>
 </table>
+<p><strong>Note</strong> : Les <a href="https://www.cpc.ncep.noaa.gov/products/wesley/wgrib2/update_2.0.8.html">versions les plus récentes de wgrib2</a> supportent ces grilles tournées. Il en sera de même avec <a href="https://gdal.org/">GDAL</a> au printemps 2020.</p>
 <h2 id="nomenclature-des-noms-de-fichiers">Nomenclature des noms de fichiers</h2>
 <p>NOTE: TOUTES LES HEURES SONT EN UTC.</p>
 <p>Les fichiers ont la nomenclature suivante :</p>
-<p>CMC_hrdps_west_Variable_TypedeNiveau_Niveau_ps1.0km_YYYYMMDDHH_Phhh-mm.grib2</p>
+<p>CMC_hrdps_west_Variable_TypedeNiveau_Niveau_GrilleResolution_YYYYMMDDTHHZ_Phhh-mm.grib2</p>
 <p>où :</p>
 <ul>
 <li><strong>CMC</strong> : Chaîne de caractères constante indiquant que le Centre météorologique canadien (CMC) émet les prévisions.</li>
@@ -163,16 +164,19 @@
 <li><strong>Variable</strong> : Type de variable contenu dans le fichier (ex. : UGRD).</li>
 <li><strong>TypedeNiveau</strong> : Type de niveau.</li>
 <li><strong>Niveau</strong> : Valeur du niveau.</li>
-<li><strong>ps1.0km</strong> : Chaîne de caractères constante indiquant que la projection utilisée est polaire stéréographique à une résolution de 1.0 km.</li>
+<li><strong>Grille</strong> : Grille horizontale [rotated_latlon] </li>
+<li><strong>Resolution</strong> : 0.009x0.009. Signifie une résolution de 0.009°(environ 1km) dans les directions longitudinale et latitudinale</li>
 <li><strong>YYYYMMDD</strong> : Année, mois et jour du début de la prévision.</li>
+<li><strong>T</strong> : Délimiteur temporel selon les normes ISO8601</li>
 <li><strong>HH</strong> : Heure UTC de la passe [00, 06, 12, 18].</li>
+<li><strong>Z</strong> : Fuseau horaire (heure UTC)</li>
 <li><strong>Phhh</strong> : « P » est un caractère constant. « hhh » représente l’heure de prévision [000, 001, 002, ..., 035/036].</li>
 <li><strong>mm</strong> : « mm » représente les minutes de prévision [Codé en dur à 00 pour l’instant. Les pas de temps de 30 minutes seront disponibles éventuellement.].</li>
 <li><strong>grib2</strong> : Chaîne de caractères constante indiquant que le format est GRIB2.</li>
 </ul>
-<p>Exemple de nom de fichier :
-CMC_hrdps_west_DEPR_ISBL_0175_ps1.0km_2019082512_P003-00.grib2</p>
-<p>Le fichier a été créé par le CMC et contient une prévision du Système haute résolution de prévision déterministe expérimental sur le domaine ouest. Il contient les dépressions du point de rosée (DEPR), au niveau isobarique 175 mb (ISBL_0175), sur une grille polaire stéréographique à une résolution de 1.0 km (ps1.0km). Il débute le 25 août 2019 à 12Z (2019082512). Il contient l’heure de prévision 03 (P003) et les minutes de prévision (00) en format GRIB2 (.grib2).</p>
+<p>Exemple de nom de fichier :</p>
+<p>CMC_hrdps_west_DEPR_ISBL_0175_rotated_latlon0.009x0.009_20190825T12Z_P003-00.grib2</p>
+<p>Le fichier a été créé par le CMC et contient une prévision du Système haute résolution de prévision déterministe expérimental sur le domaine ouest. Il contient les dépressions du point de rosée (DEPR), au niveau isobarique 175 mb (ISBL_0175), sur une grille lat-lon tournée à une résolution d'environ 1 km (rotated_latlon_0.009x0.009). Il débute le 25 août 2019 à 12Z (20190825T12Z). Il contient l’heure de prévision 03 (P003) et les minutes de prévision (00) en format GRIB2 (.grib2).</p>
 <h2 id="niveaux">Niveaux</h2>
 <p>La couverture verticale des champs tridimensionnels peut atteindre jusqu’à 28 niveaux isobariques.</p>
 <p>Niveaux isobariques (hPa) : 1015, 1000, 0985, 0970, 0950, 0925, 0900, 0850, 0800, 0750, 0700, 0650, 0600, 0550, 0500, 0450, 0400, 0350, 0300, 0275, 0250, 0225, 0200, 0175, 0150, 0100, 0050.</p>
