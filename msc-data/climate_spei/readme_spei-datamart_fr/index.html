@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../../img/favicon.ico">
-        <title>Readme wcps nemo datamart en - MSC Open Data / Données ouvertes du SMC</title>
+        <title>Readme spei datamart fr - MSC Open Data / Données ouvertes du SMC</title>
         <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../../css/base.css" rel="stylesheet">
@@ -88,107 +88,61 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#water-cycle-prediction-system-wcps-nemo-data-in-netcdf-over-the-great-lakes-and-st-lawrence-river">Water Cycle Prediction System (WCPS) NEMO data in NetCDF over the Great Lakes and St. Lawrence River</a></li>
-            <li><a href="#data-location">Data location</a></li>
-            <li><a href="#technical-specification-of-the-grid">Technical specification of the grid</a></li>
-            <li><a href="#filename-nomenclature">Filename nomenclature</a></li>
-            <li><a href="#list-of-variables">List of variables</a></li>
+        <li class="main active"><a href="#donnees-climatiques-de-lindice-de-precipitations-et-devapotranspiration-normalise-ipen-en-format-netcdf">Données climatiques de l’Indice de précipitations et d’évapotranspiration normalisé (IPEN) en format NetCDF</a></li>
+            <li><a href="#adresse-des-donnees">Adresse des données</a></li>
+            <li><a href="#nomenclature-des-noms-de-fichiers">Nomenclature des noms de fichiers</a></li>
             <li><a href="#support">Support</a></li>
-            <li><a href="#announcements-from-the-dd_info-mailing-list">Announcements from the dd_info mailing list</a></li>
+            <li><a href="#annonces-de-la-liste-de-diffusion-dd_info">Annonces de la liste de diffusion dd_info</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<p><a href="../readme_wcps_nemo-datamart_fr/">In French</a></p>
+<p><a href="../readme_spei-datamart_en/">In English</a></p>
 <p><img alt="ECCC logo" src="../../../img_eccc-logo.png" /></p>
-<p><a href="../../../readme_en/">TOC</a> &gt; <a href="../../readme_en/">MSC Open Data</a> &gt; <a href="../readme_wcps_en/">WCPS</a> &gt; WCPS-NEMO on MSC Datamart </p>
-<h1 id="water-cycle-prediction-system-wcps-nemo-data-in-netcdf-over-the-great-lakes-and-st-lawrence-river">Water Cycle Prediction System (WCPS) NEMO data in NetCDF over the Great Lakes and St. Lawrence River</h1>
-<p>The ocean-ice model, NEMO-CICE, from WCPS produces hourly forecast products. These data are available in NetCDF format with a latitude and longitude grid, corresponding to a 1km resolution (0.009 x 0.009 degree).</p>
-<h2 id="data-location">Data location</h2>
-<p>MSC Datamart data can be <a href="../../../msc-datamart/amqp_en/">automatically retrieved with the Advanced Message Queuing Protocol (AMQP)</a> as soon as they become available. An <a href="../../../usage/readme_en/">overview and examples to access and use the Meteorological Service of Canada's open data</a> is also available.</p>
-<p>The data is available using the HTTP protocol and resides in a directory that is plainly accessible to a web browser. Visiting that directory with an interactive browser will yield a raw listing of links, each link being a downloadable NetCDF file.</p>
-<p>The data can be accessed at the following URLs: </p>
+<p><a href="../../../readme_fr/">TdM</a> &gt; <a href="../../readme_fr/">Données du SMC</a> &gt; <a href="../readme_spei_fr/">IPEN</a> &gt; IPEN sur le Datamart du SMC</p>
+<h1 id="donnees-climatiques-de-lindice-de-precipitations-et-devapotranspiration-normalise-ipen-en-format-netcdf">Données climatiques de l’Indice de précipitations et d’évapotranspiration normalisé (IPEN) en format NetCDF</h1>
+<p><a href="../readme_spei_fr/">Données IPEN</a> en format NetCDF, un indice climatique utilisé pour évaluer l'influence des changements climatiques sur la sécheresse.</p>
+<h2 id="adresse-des-donnees">Adresse des données</h2>
+<p>Les données du Datamart du SMC peuvent être <a href="../../../msc-datamart/amqp_fr/">automatiquement récupérées avec le protocole avancé de mise en file d'attente des messages (AMQP)</a> dès qu'elles deviennent disponibles. Un <a href="../../../usage/readme_fr/">survol et exemples pour accéder et utiliser les données ouvertes du Service météorologique du Canada</a> est également disponible.</p>
+<p>Les données sont disponibles via le protocole HTTP. Il est possible d’y accéder avec un fureteur standard. Dans ce cas, on obtient une liste de liens donnant accès à un fichier NetCDF.</p>
+<p>Les fichiers IPEN se trouvent à l'adresse suivante :</p>
 <ul>
-<li><a href="https://dd.meteo.gc.ca/model_wcps/nemo/netcdf/lat_lon">https://dd.meteo.gc.ca/model_wcps/nemo/netcdf/lat_lon/{nd}/{HH}/{hhh}/</a>                  </li>
+<li><a href="https://dd.meteo.gc.ca/climate/spei/netcdf/historical">https://dd.meteo.gc.ca/climate/spei/netcdf/historical/{[SPEI-1, SPEI-3, SPEI-12]}</a></li>
+<li><a href="https://dd.meteo.gc.ca/climate/spei/netcdf/scenarios">https://dd.meteo.gc.ca/climate/spei/netcdf/scenarios/{[RCP2.6,RCP4.5,RCP8.5]}/{[SPEI-1, SPEI-3, SPEI-12]}</a></li>
 </ul>
-<p>where:</p>
+<p>où :</p>
 <ul>
-<li><strong>nd</strong> : Spatial dimension, latitude and longitude [2d]</li>
-<li><strong>HH</strong> : Model run start, in UTC [00,12]</li>
-<li><strong>hhh</strong> : Forecast hour [001, ..., 084] </li>
+<li><strong>historical</strong> : Simulations historiques de 1900 à 2005 de l'Indice de précipitations et d’évapotranspiration normalisé. SPEI-1 correspond à IPEN d'un mois ; SPEI-3 correspond à IPEN d'un mois et des 2 mois précédents, et SPEI-12 correspond à IPEN d'un mois et des 11 mois précédents. </li>
+<li><strong>scenarios</strong> : Réfère à différents scénarios d'émissions [RCP2.6, RCP4.5, RCP8.5] pour la période de 2006-2100.</li>
 </ul>
-<p>A 30 day history is kept in this directory.</p>
-<h2 id="technical-specification-of-the-grid">Technical specification of the grid</h2>
-<p><img alt="Image of the WCPS-NEMO domain" src="https://collaboration.cmc.ec.gc.ca/cmc/cmos/public_doc/msc-data/nwp_wcps/grille_wcps_nemo.png" /></p>
-<p>In the complete domain indicated by the white rectangle, the valide domain, which covers the lakes, is in color.</p>
-<p><strong>IMPORTANT</strong>  :  The grid shifting might be required in order to match the shorelines of the Great Lakes almost exactly, with the suggested values of 0.024E and 0.018N in degrees</p>
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>ni</td>
-<td>1681</td>
-</tr>
-<tr>
-<td>nj</td>
-<td>3181</td>
-</tr>
-<tr>
-<td>resolution at 45° N</td>
-<td>1km</td>
-</tr>
-</tbody>
-</table>
-<h2 id="filename-nomenclature">Filename nomenclature</h2>
-<p>NOTE: ALL HOURS ARE IN UTC.</p>
-<p>The files have the following nomenclature: </p>
-<p>CMC_wcps_nemo_Variable_LevelType_Level_ProjectionResolution_YYYYMMDDHH_Phhh.nc</p>
-<p>where:</p>
+<h2 id="nomenclature-des-noms-de-fichiers">Nomenclature des noms de fichiers</h2>
+<p>NOTE : TOUTES LES HEURES SONT EN UTC.</p>
 <ul>
-<li><strong>CMC</strong> : Constant string indicating that the data is from the Canadian Meteorological Centre (CMC)</li>
-<li><strong>wcps_nemo</strong> : Constant string indicating that the data is from WCPS-NEMO component </li>
-<li><strong>Variable</strong> : Variable type included in this file  </li>
-<li><strong>LevelType</strong> : Level type [sfc, depth, tgl]</li>
-<li><strong>Level</strong> : Level value: 0 for sfc (surface), 0.5 for depth (lake depth in meters), 40 for tgl (altitude in meter) </li>
-<li><strong>Projection</strong> : Constant string indicating the latitude and longitude projection [latlon]</li>
-<li><strong>Resolution</strong> : Resolution in degreee 0.009x0.009 (about 1km) in latitude and longitude directions </li>
-<li><strong>YYYYMMDD</strong> : Year, month and days of the beginning of the forecast </li>
-<li><strong>HH</strong> : UTC run time [00,12]</li>
-<li><strong>Phhh</strong> : P constant character, hhh the forecast hour [001,002, ..., 084] </li>
-<li><strong>nc</strong> : constant string indicating the NetCDF format</li>
+<li>CMIP5_hist_TemporalResolution_Value_ProjectionResolution_Variable_pctlPP.nc</li>
+<li>CMIP5_rcpx.y_TemporalResolution_Value_ProjectionResolution_Variable_pctlPP.nc</li>
 </ul>
-<p>Example:</p>
+<p>avec :</p>
 <ul>
-<li>CMC_wcps_nemo_vomecrty_depth_0.5_latlon0.009x0.009_2019011100_P036.nc</li>
+<li><strong>CMIP5</strong> : Chaîne constante indiquant les ensembles de données de la phase 5 du projet d'intercomparaison de modèles couplés.</li>
+<li><strong>hist</strong> : Chaîne constante indiquant les simulations historiques.</li>
+<li><strong>rcpx.y</strong> : Profils représentatifs d’évolution de concentration (scénarios d'émissions), prenant l'une des valeurs : [rcp2.6, rcp4.5, rcp8.5].</li>
+<li><strong>TemporalResolution</strong> : Résolution temporelle, prenant l'une des valeurs : [SPEI-1, SPEI-3, SPEI-12]. SPEI-1 correspond à IPEN d'un mois ; SPEI-3 correspond à IPEN d'un mois et des 2 mois précédents, et SPEI-12 correspond à IPEN d'un mois et des 11 mois précédents. </li>
+<li><strong>Value</strong> : Catégorie de valeurs représentant la période de temps de l'ensemble de données, en prenant l'une de ces deux valeurs : [2006-2100] pour les scénarios et [1900-2005] pour les simulations historiques.</li>
+<li><strong>Projection</strong> : Projection de la grille (projection), prenant la valeur : [latlon]</li>
+<li><strong>Resolution</strong> : Résolution de la grille prenant la valeur : [1x1]; 1x1 représente une résolution de grille de 1 degré dans les directions latitudinale et longitudinale.</li>
+<li><strong>Variable</strong> : Nom de la variable disponible dans le fichier, prenant uniquement la valeur [SPEI], pour l'Indice de précipitations et d’évapotranspiration normalisé.</li>
+<li><strong>PctlPP</strong> : Percentile d'ensemble, prenant l'une des valeurs : [pctl25, pctl50, pctl75]; pctl25 représente le 25e percentile de l'ensemble ; pctl50 représente le 50e percentile, également appelé médiane de l'ensemble ; pctl75 représente le 75e percentile de l'ensemble.</li>
+<li><strong>nc</strong> : Chaîne de caractères constante indiquant le format NetCDF</li>
 </ul>
-<h2 id="list-of-variables">List of variables</h2>
-<p>List of 2D variables available in the files: </p>
+<p>Exemples :</p>
 <ul>
-<li><strong>tairsurf</strong> : Air temperature at about 40 meters in height</li>
-<li><strong>uwindsurf</strong> : Wind X velocity at about 40 meters in height </li>
-<li><strong>vwindsurf</strong> : Wind Y velocity at about 40 meters in height </li>
-<li><strong>vozocrtx</strong> : Sea water X velocity at the first model layer </li>
-<li><strong>vomecrty</strong> : Sea water Y velocity at the first model layer  </li>
-<li><strong>votemper</strong> : Sea water potential temperature at the first model layer  </li>
-<li><strong>vosaline</strong> : Sea water salinity at the surface   </li>
-<li><strong>sossheig</strong> : Sea surface height above geoid </li>
-<li><strong>sokaraml</strong> : Ocean mixed layer depth based on density criterion </li>
-<li><strong>iiceconc</strong> : Sea ice area fraction </li>
-<li><strong>iicevol</strong> : Sea ice volume per unit grid cell area</li>
-<li><strong>itzocrtx</strong> : Sea ice X velocity </li>
-<li><strong>itmecrty</strong> : Sea ice Y velocity </li>
-<li><strong>iicepressure</strong> : Depth-integrated internal sea ice pressure</li>
-<li><strong>iicestrength</strong> : Depth-integrated compressive sea ice strength</li>
+<li>CMIP5_rcp8.5_SPEI-12_2006-2100_latlon1x1_SPEI_pctl50.nc</li>
 </ul>
+<p>Le fichier représente le 50e percentile de l'indice de précipitations et d’évapotranspiration normalisé d'un mois et des 11 mois précédents pour la période 2006-2100 considérant le scénario d'émissions rcp8.5.</p>
 <h2 id="support">Support</h2>
-<p>If you have any questions about these data, please contact us at: <a href="mailto:ec.dps-client.ec@canada.ca">ec.dps-client.ec@canada.ca</a></p>
-<h2 id="announcements-from-the-dd_info-mailing-list">Announcements from the dd_info mailing list</h2>
-<p>Announcements related to this dataset are available in the <a href="https://lists.ec.gc.ca/cgi-bin/mailman/listinfo/dd_info">dd_info</a>.</p></div>
+<p>Pour toute question relative à ces données, merci de nous contacter à l'adresse : <a href="mailto:ec.dps-client.ec@canada.ca">ec.dps-client.ec@canada.ca</a></p>
+<h2 id="annonces-de-la-liste-de-diffusion-dd_info">Annonces de la liste de diffusion dd_info</h2>
+<p>Les annonces reliées à ce jeu de données sont disponibles via la liste <a href="https://lists.ec.gc.ca/cgi-bin/mailman/listinfo/dd_info">dd_info</a>.</p></div>
         </div>
 
         <footer class="col-md-12">
