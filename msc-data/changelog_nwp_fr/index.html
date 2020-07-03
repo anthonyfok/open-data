@@ -9,74 +9,92 @@
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
         <title>Changelog nwp fr - MSC Open Data / Données ouvertes du SMC</title>
-        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
+        <link href="../../css/extra.css" rel="stylesheet">
 
         <script src="../../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
     <body>
-
-        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-
-                <!-- Collapsed navigation -->
-                <div class="navbar-header">
-                    <!-- Expander button -->
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="../..">MSC Open Data / <br>Données ouvertes du SMC</a>
-                </div>
+                <a class="navbar-brand" href="../..">MSC Open Data / <br>Données ouvertes du SMC</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
                 <!-- Expanded navigation -->
-                <div class="navbar-collapse collapse">
+                <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li >
-                                <a href="../readme_en/">Available data / <br>Données disponibles</a>
+                            <li class="navitem">
+                                <a href="../readme_en/" class="nav-link">Available data /<br>Données disponibles</a>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Data access / <br>Accès aux données <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Data access /<br>Accès aux données <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
-<li >
-    <a href="../../msc-datamart/readme_en/">MSC Datamart / <br>Datamart du SMC</a>
+<li>
+    <a href="../../msc-geomet/readme_en/" class="dropdown-item">MSC GeoMet /<br>GeoMet du SMC</a>
 </li>
                                     
-<li >
-    <a href="../../msc-geomet/readme_en/">MSC GeoMet / <br>GeoMet du SMC</a>
+<li>
+    <a href="../../msc-datamart/readme_en/" class="dropdown-item">MSC Datamart /<br>Datamart du SMC</a>
 </li>
                                     
-<li >
-    <a href="../../cost-recovered/readme_en/">Cost-recovered services /<br>Services à recouvrement de coûts</a>
+<li>
+    <a href="../../cost-recovered/readme_en/" class="dropdown-item">Cost-recovered services /<br>Services à recouvrement de coûts</a>
 </li>
                                 </ul>
                             </li>
-                            <li >
-                                <a href="../../usage/readme_en/">Usage overview / <br>Aperçu de l'utilisation</a>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Usage and tutorials / <br>Utilisation et tutoriels <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../usage/readme_en/" class="dropdown-item">Usage overview /<br>Aperçu de l'utilisation</a>
+</li>
+                                    
+<li>
+    <a href="../../usage/tutorial_WMS_QGIS_en/" class="dropdown-item">Display and animate data in QGIS /<br>Afficher et animer des couches dans QGIS</a>
+</li>
+                                    
+<li>
+    <a href="../../usage/tutorial_web-maps_en/" class="dropdown-item">Create interactive web maps /<br>Créer des cartes web interactives</a>
+</li>
+                                    
+<li>
+    <a href="../../usage/tutorial_raw-data_QGIS_en/" class="dropdown-item">Add raw data to QGIS /<br>Ajouter des données brutes à QGIS</a>
+</li>
+                                    
+<li>
+    <a href="../../usage/use-case_arthur/use-case_arthur_en/" class="dropdown-item">API usage from a Python script /<br>Utiliser l'API dans un script Python</a>
+</li>
+                                    
+<li>
+    <a href="../../usage/tutorial_OAFeat_QGIS_en/" class="dropdown-item">Use OGC API Features in QGIS /<br>Utiliser OGC API Features dans QGIS</a>
+</li>
+                                    
+<li>
+    <a href="../../msc-geomet/web-services_en/" class="dropdown-item">API technical doc /<br>Doc technique de l'API</a>
+</li>
+                                </ul>
                             </li>
-                            <li >
-                                <a href="https://weather.gc.ca/mainmenu/contact_us_e.html">Contact us / <br>Contactez-nous</a>
+                            <li class="navitem">
+                                <a href="https://weather.gc.ca/mainmenu/contact_us_e.html" class="nav-link">Contact us /<br>Contactez-nous</a>
                             </li>
                         </ul>
 
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
                                 <i class="fa fa-search"></i> Search /<br> <i class="fa fa-fw"></i>Rechercher
                             </a>
                         </li>
@@ -86,74 +104,278 @@
         </div>
 
         <div class="container">
-                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
-    <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#changements-au-systeme-operationnel-du-centre-meteorologique-canadien-cmc">Changements au système opérationnel du Centre Météorologique Canadien (CMC)</a></li>
-            <li><a href="#2020">2020</a></li>
-            <li><a href="#2019">2019</a></li>
-            <li><a href="#2018">2018</a></li>
-            <li><a href="#2017">2017</a></li>
-            <li><a href="#2016">2016</a></li>
-            <li><a href="#2015">2015</a></li>
-            <li><a href="#2014">2014</a></li>
-            <li><a href="#2013">2013</a></li>
-            <li><a href="#2012">2012</a></li>
-            <li><a href="#2011">2011</a></li>
-            <li><a href="#le-mercredi-20-octobre-2010">Le mercredi 20 Octobre 2010</a></li>
-            <li><a href="#le-mardi-2-mars-2010">Le mardi 2 mars 2010</a></li>
-            <li><a href="#le-jeudi-3-decembre-2009">Le jeudi 3 décembre 2009</a></li>
-            <li><a href="#le-mercredi-18-novembre-2009">Le mercredi 18 novembre 2009</a></li>
-            <li><a href="#le-lundi-22-juin-2009">Le lundi 22 juin 2009</a></li>
-            <li><a href="#le-mercredi-10-juin-2009">Le mercredi 10 juin 2009</a></li>
-            <li><a href="#le-mardi-31-mars-2009">Le mardi 31 mars 2009</a></li>
-            <li><a href="#le-mercredi-12-mars-2009">Le mercredi 12 mars 2009</a></li>
-            <li><a href="#le-mercredi-4-mars-2009">Le mercredi 4 mars 2009</a></li>
-            <li><a href="#le-mercredi-28-mai-2008">Le mercredi 28 mai 2008</a></li>
-            <li><a href="#le-mardi-11-mars-2008">Le mardi 11 mars 2008</a></li>
-            <li><a href="#2008">2008</a></li>
-            <li><a href="#le-jeudi-22-novembre-2007">Le jeudi 22 novembre 2007</a></li>
-            <li><a href="#le-mardi-10-juillet-2007">Le mardi 10 juillet 2007</a></li>
-            <li><a href="#le-lundi-9-juillet-2007">Le lundi 9 juillet, 2007</a></li>
-            <li><a href="#le-mercredi-4-juillet-2007">Le mercredi, 4 juillet, 2007</a></li>
-            <li><a href="#2007">2007</a></li>
-            <li><a href="#le-mardi-31-octobre-2006">Le mardi, 31 octobre, 2006</a></li>
-            <li><a href="#le-mardi-13-decembre-2005">Le mardi 13 décembre 2005</a></li>
-            <li><a href="#le-mercredi-7-decembre-2005">Le mercredi 7 décembre 2005</a></li>
-            <li><a href="#le-jeudi-21-juillet-2005">Le jeudi 21 juillet 2005</a></li>
-            <li><a href="#le-mercredi-6-juillet-2005">Le mercredi 6 juillet 2005</a></li>
-            <li><a href="#le-mardi-15-mars-2005">Le mardi 15 mars 2005</a></li>
-            <li><a href="#le-jeudi-13-janvier-2005">Le jeudi 13 janvier 2005</a></li>
-            <li><a href="#le-mercredi-12-janvier-2005">Le mercredi 12 janvier 2005</a></li>
-            <li><a href="#le-mardi-21-septembre-2004">Le mardi 21 septembre 2004</a></li>
-            <li><a href="#le-mardi-18-mai-2004">Le mardi 18 mai 2004</a></li>
-            <li><a href="#2004">2004</a></li>
-            <li><a href="#le-jeudi-19-juin-2003">Le jeudi 19 juin 2003</a></li>
-            <li><a href="#fevrier-mars-et-avril-2002">Février, mars et avril 2002</a></li>
-            <li><a href="#le-mardi-11-decembre-2001-12z">Le mardi 11 décembre 2001, 12Z</a></li>
-            <li><a href="#le-mardi-11-septembre-2001-12z">Le mardi 11 septembre 2001, 12Z</a></li>
-            <li><a href="#le-jeudi-7-juin-2001-a-06z">Le jeudi 7 juin 2001 à 06Z</a></li>
-            <li><a href="#le-jeudi-11-janvier-2001-a-12z">Le jeudi 11 janvier 2001 à 12Z</a></li>
-            <li><a href="#le-mercredi-27-septembre-2000-a-12z">Le mercredi 27 septembre 2000 à 12Z</a></li>
-            <li><a href="#le-mercredi-14-juin-2000-a-12z">Le mercredi 14 juin 2000 à 12Z</a></li>
-            <li><a href="#le-mercredi-14-octobre-1998-a-12z">Le mercredi 14 octobre 1998 à 12Z</a></li>
-            <li><a href="#le-mardi-15-septembre-1998-a-12z">Le mardi 15 septembre 1998 à 12Z</a></li>
-            <li><a href="#le-mercredi-11-mars-1998-a-12z">Le mercredi 11 mars 1998 à 12Z</a></li>
-            <li><a href="#le-jeudi-22-janvier-1998-a-00z">Le jeudi 22 janvier 1998 à 00Z</a></li>
-            <li><a href="#le-mercredi-24-septembre-1997-a-12z">Le mercredi 24 septembre 1997 à 12Z</a></li>
-            <li><a href="#le-mercredi-18-juin-1997-a-12z">Le mercredi 18 juin 1997 à 12Z</a></li>
-            <li><a href="#le-mardi-10-juin-1997-a-12z">Le mardi 10 juin 1997 à 12Z</a></li>
-            <li><a href="#le-lundi-24-fevrier-1997-a-12z">Le lundi 24 février 1997 à 12Z</a></li>
-            <li><a href="#1996">1996</a></li>
-            <li><a href="#1995">1995</a></li>
-    </ul>
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#changements-au-systeme-operationnel-du-centre-meteorologique-canadien-cmc" class="nav-link">Changements au système opérationnel du Centre Météorologique Canadien (CMC)</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#2020" class="nav-link">2020</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#2019" class="nav-link">2019</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#2018" class="nav-link">2018</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#2017" class="nav-link">2017</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#2016" class="nav-link">2016</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#2015" class="nav-link">2015</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#2014" class="nav-link">2014</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#2013" class="nav-link">2013</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#2012" class="nav-link">2012</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#2011" class="nav-link">2011</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#le-mercredi-20-octobre-2010" class="nav-link">Le mercredi 20 Octobre 2010</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#le-mardi-2-mars-2010" class="nav-link">Le mardi 2 mars 2010</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#le-jeudi-3-decembre-2009" class="nav-link">Le jeudi 3 décembre 2009</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#le-mercredi-18-novembre-2009" class="nav-link">Le mercredi 18 novembre 2009</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#le-lundi-22-juin-2009" class="nav-link">Le lundi 22 juin 2009</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#le-mercredi-10-juin-2009" class="nav-link">Le mercredi 10 juin 2009</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#le-mardi-31-mars-2009" class="nav-link">Le mardi 31 mars 2009</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#le-mercredi-12-mars-2009" class="nav-link">Le mercredi 12 mars 2009</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#le-mercredi-4-mars-2009" class="nav-link">Le mercredi 4 mars 2009</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#le-mercredi-28-mai-2008" class="nav-link">Le mercredi 28 mai 2008</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#le-mardi-11-mars-2008" class="nav-link">Le mardi 11 mars 2008</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#2008" class="nav-link">2008</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#le-jeudi-22-novembre-2007" class="nav-link">Le jeudi 22 novembre 2007</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#le-mardi-10-juillet-2007" class="nav-link">Le mardi 10 juillet 2007</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#le-lundi-9-juillet-2007" class="nav-link">Le lundi 9 juillet, 2007</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#le-mercredi-4-juillet-2007" class="nav-link">Le mercredi, 4 juillet, 2007</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#2007" class="nav-link">2007</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#le-mardi-31-octobre-2006" class="nav-link">Le mardi, 31 octobre, 2006</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#le-mardi-13-decembre-2005" class="nav-link">Le mardi 13 décembre 2005</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#le-mercredi-7-decembre-2005" class="nav-link">Le mercredi 7 décembre 2005</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#le-jeudi-21-juillet-2005" class="nav-link">Le jeudi 21 juillet 2005</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#le-mercredi-6-juillet-2005" class="nav-link">Le mercredi 6 juillet 2005</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#le-mardi-15-mars-2005" class="nav-link">Le mardi 15 mars 2005</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#le-jeudi-13-janvier-2005" class="nav-link">Le jeudi 13 janvier 2005</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#le-mercredi-12-janvier-2005" class="nav-link">Le mercredi 12 janvier 2005</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#le-mardi-21-septembre-2004" class="nav-link">Le mardi 21 septembre 2004</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#le-mardi-18-mai-2004" class="nav-link">Le mardi 18 mai 2004</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#2004" class="nav-link">2004</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#le-jeudi-19-juin-2003" class="nav-link">Le jeudi 19 juin 2003</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#fevrier-mars-et-avril-2002" class="nav-link">Février, mars et avril 2002</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#le-mardi-11-decembre-2001-12z" class="nav-link">Le mardi 11 décembre 2001, 12Z</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#le-mardi-11-septembre-2001-12z" class="nav-link">Le mardi 11 septembre 2001, 12Z</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#le-jeudi-7-juin-2001-a-06z" class="nav-link">Le jeudi 7 juin 2001 à 06Z</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#le-jeudi-11-janvier-2001-a-12z" class="nav-link">Le jeudi 11 janvier 2001 à 12Z</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#le-mercredi-27-septembre-2000-a-12z" class="nav-link">Le mercredi 27 septembre 2000 à 12Z</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#le-mercredi-14-juin-2000-a-12z" class="nav-link">Le mercredi 14 juin 2000 à 12Z</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#le-mercredi-14-octobre-1998-a-12z" class="nav-link">Le mercredi 14 octobre 1998 à 12Z</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#le-mardi-15-septembre-1998-a-12z" class="nav-link">Le mardi 15 septembre 1998 à 12Z</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#le-mercredi-11-mars-1998-a-12z" class="nav-link">Le mercredi 11 mars 1998 à 12Z</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#le-jeudi-22-janvier-1998-a-00z" class="nav-link">Le jeudi 22 janvier 1998 à 00Z</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#le-mercredi-24-septembre-1997-a-12z" class="nav-link">Le mercredi 24 septembre 1997 à 12Z</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#le-mercredi-18-juin-1997-a-12z" class="nav-link">Le mercredi 18 juin 1997 à 12Z</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#le-mardi-10-juin-1997-a-12z" class="nav-link">Le mardi 10 juin 1997 à 12Z</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#le-lundi-24-fevrier-1997-a-12z" class="nav-link">Le lundi 24 février 1997 à 12Z</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#1996" class="nav-link">1996</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#1995" class="nav-link">1995</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
 </div></div>
-                <div class="col-md-9" role="main">
+                    <div class="col-md-9" role="main">
 
 <p><a href="../changelog_nwp_en/">In English</a></p>
 <p><img alt="ECCC logo" src="../../img_eccc-logo.png" /></p>
 <p><a href="../../readme_fr/">TdM</a> &gt; <a href="../readme_fr/">Données du SMC</a> &gt; Le journal des modifications du système opérationnel du CMC</p>
 <h1 id="changements-au-systeme-operationnel-du-centre-meteorologique-canadien-cmc">Changements au système opérationnel du Centre Météorologique Canadien (CMC)</h1>
 <h2 id="2020">2020</h2>
+<h3 id="26-juin-2020">26 juin 2020</h3>
+<ul>
+<li><a href="../nwp_geps/changelog_geps_fr#le-vendredi-26-juin-2020">Ajout des observations GPSRO des satellites COSMIC-II dans le SGPE</a></li>
+<li><a href="../nwp_gdps/changelog_gdps_fr#le-vendredi-26-juin-2020">Ajout des observations GPSRO des satellites COSMIC-II dans le SGPD</a></li>
+<li><a href="../nwp_rdps/changelog_rdps_fr#le-vendredi-26-juin-2020">Ajout des observations GPSRO des satellites COSMIC-II dans le SRPD</a></li>
+</ul>
+<h3 id="29-avril-2020">29 avril 2020</h3>
+<ul>
+<li><a href="../nwp_geps/changelog_geps_fr#le-mercredi-29-avril-2020">Ajout des observations GPSRO des satellites PAZ et KOMPSAT-5 dans le SGPE</a></li>
+<li><a href="../nwp_gdps/changelog_gdps_fr#le-mercredi-29-avril-2020">Ajout des observations GPSRO des satellites PAZ et KOMPSAT-5 dans le SGPD</a></li>
+<li><a href="../nwp_rdps/changelog_rdps_fr#le-mercredi-29-avril-2020">Ajout des observations GPSRO des satellites PAZ et KOMPSAT-5 dans le SRPD</a></li>
+</ul>
+<h3 id="28-avril-2020">28 avril 2020</h3>
+<ul>
+<li><a href="../nwp_geps/changelog_geps_fr#le-mardi-28-avril-2020">Ajout des observations AMV du satellite MetPp-3/C dans le SGPE</a></li>
+<li><a href="../nwp_gdps/changelog_gdps_fr#le-mardi-28-avril-2020">Ajout des observations AMV du satellite MetPp-3/C dans le SGPD</a></li>
+<li><a href="../nwp_rdps/changelog_rdps_fr#le-mardi-28-avril-2020">Ajout des observations AMV du satellite MetPp-3/C dans le SRPD</a></li>
+</ul>
+<h3 id="1-avril-2020">1 avril 2020</h3>
+<ul>
+<li><a href="../nwp_raqdps-fw/changelog_raqdps-fw_fr#le-mercredi-1-avril-2020">FireWork d'été 2020 - Début de la saison</a></li>
+</ul>
 <h3 id="21-janvier-2020">21 janvier 2020</h3>
 <ul>
 <li><a href="../changelog_multisystems_fr#le-mardi-21-janvier-2020">Nouvelle infrastructure de calcul haute performance</a></li>
@@ -172,19 +394,36 @@
 <li><a href="../nwp_giops/changelog_giops_fr#le-mercredi-3-juillet-2019">Système global de prévision océan-glace (SGPOG) 3.0.0</a></li>
 <li><a href="../nwp_rdps/changelog_rdps_fr#le-mercredi-3-juillet-2019">Système régional de prévision déterministe (SRPD) 7.0.0</a></li>
 <li><a href="../nwp_reps/changelog_reps_fr#le-mercredi-3-juillet-2019">Système régional de prévision d'ensemble (SRPE) 3.0.0</a></li>
+<li><a href="../nwp_riops/changelog_riops_fr#le-mercredi-3-juillet-2019">Système régional de Prévision Océan-Glace (SRPOG) 2.0.0</a></li>
 <li><a href="../nwp_hrdps/changelog_hrdps_fr/log_cansips_fr#le-mercredi-3-juillet-2019">Système haute résolution de prévision déterministe (SHRPD) 5.1.0</a></li>
-<li><a href="../nwp_rdpa/changelog_rdpa_fr#le-mercredi-9-juillet-2019">Analyse Régionale Déterministe de Précipitation (ARPD (CaPA-10km)) 4.6.0</a></li>
-<li><a href="../nwp_hrdpa/changelog_hrdpa_fr#le-mercredi-9-juillet-2019">Analyse à Haute Résolution Déterministe de Précipitation (CaPA-AHRDP) 4.6.0</a></li>
-<li><a href="../nwp_wcps/changelog_wcps_fr#le-mercredi-9-juillet-2019">Système de prévision du cycle de l'eau (SPCE) 2.1.0</a></li>
-<li><a href="../nwp_cansips/changelog_cansips_fr#le-mercredi-9-juillet-2019">Système de Prévision Interannuelle et Saisonniere Canadien (SPISCAN)</a></li>
-<li></li>
+<li><a href="../nwp_raqdps-fw/changelog_raqdps-fw_fr#le-mercredi-3-juillet-2019">Système régional de prévision déterministe de la qualité de l'air Firework (SRPDQA-FW) 21</a></li>
+<li><a href="../nwp_rdpa/changelog_rdpa_fr#le-mercredi-3-juillet-2019">Analyse Régionale Déterministe de Précipitation (ARPD (CaPA-10km)) 4.6.0</a></li>
+<li><a href="../nwp_hrdpa/changelog_hrdpa_fr#le-mercredi-3-juillet-2019">Analyse à Haute Résolution Déterministe de Précipitation (CaPA-AHRDP) 4.6.0</a></li>
+<li><a href="../nwp_wcps/changelog_wcps_fr#le-mercredi-3-juillet-2019">Système de prévision du cycle de l'eau (SPCE) 2.1.0</a></li>
+<li><a href="../nwp_cansips/changelog_cansips_fr#le-mercredi-3-juillet-2019">Système de Prévision Interannuelle et Saisonniere Canadien (SPISCAN)</a></li>
+<li><a href="../nwp_riops/changelog_riops_fr#le-mercredi-3-juillet-2019">Système Régional de Prévision Océan-Glace (SRPOG) 2.0.0</a></li>
+<li><a href="../nwp_rdsps/changelog_rdsps_fr#le-mercredi-3-juillet-2019">Système régional de prévision déterministe d’onde de tempête (SRPDOT) 1.6.0</a></li>
+<li><a href="../nwp_resps/changelog_resps_fr#le-mercredi-3-juillet-2019">Système régional de prévision d'ensemble d’onde de tempête (SRPEOT) 1.2.0</a></li>
+</ul>
+<h3 id="15-avril-2019">15 avril 2019</h3>
+<ul>
+<li><a href="../nwp_raqdps-fw/changelog_raqdps-fw_fr#le-lundi-15-avril-2019">FireWork d'été 2019 - Début de la saison</a></li>
 </ul>
 <h3 id="4-mars-2019">4 mars 2019</h3>
 <ul>
 <li><a href="../nwp_rdwps/changelog_rdwps_fr#le-lundi-4-mars-2019">Système régional de prévision déterministe des vagues (SRPDV) 3.2.0</a></li>
 <li><a href="../nwp_wcps/changelog_wcps_fr#le-lundi-4-mars-2019">Déclaration du statut opérationnel pour le Système de prévision du cycle de l'eau (SPCE) 2.0.0</a></li>
+<li><a href="../nwp_rewps/changelog_rewps_fr#le-lundi-4-mars-2019">Système régional de prévision d'ensemble des vagues (SRPEV) 1.2.0</a></li>
+</ul>
+<h3 id="30-janvier-2019">30 janvier 2019</h3>
+<ul>
+<li><a href="../nwp_rdsps/changelog_rdsps_fr#le-mercredi-30-janvier-2019">Système régional de prévision déterministe d’onde de tempête (SRPDOT) 1.5.0</a></li>
 </ul>
 <h2 id="2018">2018</h2>
+<h3 id="28-novembre-2018">28 novembre 2018</h3>
+<ul>
+<li><a href="../nwp_atags/changelog_atags_fr#le-mercredi-28-novembre-2018">Système automatisé de prévisions à l'aviation (aTAGS) 1.1.0</a></li>
+</ul>
 <h3 id="18-septembre-2018">18 septembre 2018</h3>
 <ul>
 <li><a href="../nwp_geps/changelog_geps_fr#le-mardi-18-septembre-2018">Système global de prévision d'ensemble (SGPE) 5.0.0</a></li>
@@ -192,17 +431,41 @@
 <li><a href="../nwp_rdps/changelog_rdps_fr#le-mardi-18-septembre-2018">Système régional de prévision déterministe (SRPD) 6.0.0</a></li>
 <li><a href="../nwp_reps/changelog_reps_fr#le-mardi-18-septembre-2018">Système régional de prévision d'ensemble (SRPE) 2.4.0</a></li>
 <li><a href="../nwp_hrdps/changelog_hrdps_fr#le-mardi-18-septembre-2018">Système haute résolution de prévision déterministe (SHRPD) 5.0.0</a></li>
+<li><a href="../nwp_raqdps-fw/changelog_raqdps-fw_fr#le-mardi-18-septembre-2018">Système régional de prévision déterministe de la qualité de l'air FireWork version 20</a></li>
 <li><a href="../nwp_rdpa/changelog_rdpa_fr#le-mardi-18-septembre-2018">Analyse régionale déterministe de précipitation (ARDP (CaPA-10km)) 4.5.0</a></li>
 <li><a href="../nwp_hrdpa/changelog_hrdpa_fr#le-mardi-18-septembre-2018">Analyse déterministe de précipitation à haute résolution (AHRDP (CaPA-2.5km)) 4.5.0</a></li>
 <li><a href="../nwp_gdwps/changelog_gdwps_fr#le-mardi-18-septembre-2018">Fin du service pour le système de vague "WAM-Global"</a></li>
+<li><a href="../nwp_raqdps/changelog_raqdps_fr#le-mardi-18-septembre-2018">Système régional de prévision déterministe de la qualité de l'air (SRPDQA) 020</a></li>
+</ul>
+<h3 id="28-juin-2018">28 juin 2018</h3>
+<ul>
+<li><a href="../nwp_caps/changelog_caps_fr#le-jeudi-28-juin-2018">Couplage bi-directionnel avec une modèle océan-glace dans le système SCPA</a></li>
+</ul>
+<h3 id="7-juin-2018">7 juin 2018</h3>
+<ul>
+<li><a href="../changelog_multisystems_fr#le-jeudi-7-juin-2018">Remplacement du satellite GOES-13 par GOES-16</a></li>
+<li><a href="../changelog_multisystems_fr#le-jeudi-7-juin-2018">Remplacement du satellite Meteosat-10 par Meteosat-11</a></li>
 </ul>
 <h3 id="4-avril-2018">4 avril 2018</h3>
 <ul>
-<li><a href="../nwp_rdwps/changelog_rdwps_fr#le-mercredi-4-mars-2018">Système régional de prévision déterministe des vagues (SRPDV) 3.0.0</a></li>
+<li><a href="../nwp_rdwps/changelog_rdwps_fr#le-mercredi-4-avril-2018">Système régional de prévision déterministe des vagues (SRPDV) 3.0.0</a></li>
+<li><a href="../nwp_rewps/changelog_rewps_fr#le-mercredi-4-avril-2018">Système régional de prévision d'ensemble des vagues (SRPEV) 1.0.0</a></li>
+</ul>
+<h3 id="3-avril-2018">3 avril 2018</h3>
+<ul>
+<li><a href="../nwp_raqdps-fw/changelog_raqdps-fw_fr#le-mardi-3-avril-2018">FireWork d'été 2018 - Début de la saison</a></li>
 </ul>
 <h3 id="2-mars-2018">2 mars 2018</h3>
 <ul>
 <li><a href="../nwp_hrdpa/changelog_hrdpa_fr#le-vendredi-2-mars-2018">Analyse déterministe de précipitation à haute résolution (AHRDP (CaPA)) 4.1.0</a></li>
+</ul>
+<h3 id="1-mars-2018">1 mars 2018</h3>
+<ul>
+<li><a href="../changelog_multisystems_fr#le-jeudi-1-mars-2018">Remplacement des observations AMV du satellite Meteosat-10 par Meteosat-11</a></li>
+</ul>
+<h3 id="24-janvier-2018">24 janvier 2018</h3>
+<ul>
+<li><a href="../nwp_caps/changelog_caps_fr#le-mercredi-24-janvier-2018">Système canadien de prévision de l’Arctique (SCPA) 1.0.0</a></li>
 </ul>
 <h2 id="2017">2017</h2>
 <h3 id="14-decembre-2017">14 décembre 2017</h3>
@@ -214,6 +477,11 @@
 <li><a href="../nwp_gdps/changelog_gdps_fr#le-mercredi-1er-novembre-2017">Système global de prévision déterministe (SGPD) 6.0.0</a></li>
 <li><a href="../nwp_giops/changelog_giops_fr#le-mercredi-1er-novembre-2017">Système global de prévision océan-glace (SGPOG) 2.3</a></li>
 <li><a href="../nwp_gdwps/changelog_gdwps_fr#le-mercredi-1er-novembre-2017">Système global de prévision déterministe des vagues (SGPDV) 1.3.0</a></li>
+<li><a href="../nwp_rdsps/changelog_rdsps_fr#le-mercredi-30-janvier-2017">Système régional de prévision déterministe d’onde de tempête (SRPDOT) 1.3.0</a></li>
+</ul>
+<h3 id="6-septembre-2017">6 septembre 2017</h3>
+<ul>
+<li><a href="../changelog_multisystems_fr#le-mercredi-6-septembre-2017">Nouvelle infrastructure de calcul haute performance</a></li>
 </ul>
 <h2 id="2016">2016</h2>
 <h3 id="9-novembre-2016">9 novembre 2016</h3>
@@ -224,11 +492,27 @@
 <ul>
 <li><a href="../nwp_rdps/changelog_rdps_fr#le-mercredi-7-septembre-2016">Système régional de prévision déterministe (SRPD) 5.0.0</a></li>
 <li><a href="../nwp_hrdps/changelog_hrdps_fr#le-mercredi-7-septembre-2016">Système haute résolution de prévision déterministe (SHRPD) 4.2.0</a></li>
+<li><a href="../nwp_raqdps-fw/changelog_raqdps-fw_fr#le-mercredi-7-septembre-2016">FireWork été 2016 - Mise à jour</a></li>
+<li><a href="../nwp_raqdps/changelog_raqdps_fr#le-mercredi-7-septembre-2016">Système régional de prévision déterministe de la qualité de l'air (SRPDQA) 016</a></li>
+<li><a href="../nwp_atags/changelog_atags_fr#le-mercredi-7-septembre-2016">Système automatisé de prévisions à l'aviation (aTAGS) version 1.0.0</a></li>
 </ul>
 <h3 id="21-juin-2016">21 juin 2016</h3>
 <ul>
 <li><a href="../nwp_giops/changelog_giops_fr#le-mardi-21-juin-2016">Système Global de Prévision Océan-Glace (SGPOG) 2.1</a></li>
 <li><a href="../nwp_cansips/changelog_cansips_fr#le-mardi-21-juin-2016">Utilisation des analyses SGPOG par le Système de Prévision Interannuelle et Saisonniere Canadien (SPISCAN)</a></li>
+<li><a href="../nwp_riops/changelog_riops_fr#le-mardi-21-juin-2016">Système Régional de Prévision Océan-Glace (SRPOG) 1.1</a></li>
+</ul>
+<h3 id="14-avril-2016">14 avril 2016</h3>
+<ul>
+<li><a href="../nwp_raqdps-fw/changelog_raqdps-fw_fr#le-jeudi-14-avril-2016">FireWork d'été 2016 - Début de la saison</a></li>
+</ul>
+<h3 id="7-avril-2016">7 avril 2016</h3>
+<ul>
+<li><a href="../nwp_raqdps/changelog_raqdps_fr#le-mercredi-7-avril-2016">Système régional de prévision déterministe de la qualité de l'air (SRPDQA) 015</a></li>
+</ul>
+<h3 id="16-mars-2016">16 mars 2016</h3>
+<ul>
+<li><a href="../changelog_multisystems_fr#le-mercredi-16-mars-2016">Remplacement du satellite MTSAT-2 par Himawari-8</a></li>
 </ul>
 <h2 id="2015">2015</h2>
 <h3 id="15-decembre-2015">15 décembre 2015</h3>
@@ -240,17 +524,33 @@
 <li><a href="../nwp_rdpa/changelog_rdpa_fr#le-mardi-15-decembre-2015">Analyse régionale déterministe de précipitation (ARDP (CaPA)) 3.2.0</a></li>
 <li><a href="../nwp_hrdps/changelog_hrdps_fr#le-mardi-15-decembre-2015">Système haute résolution de prévision déterministe (SHRPD) 4.1.0</a></li>
 </ul>
+<h3 id="17-septembre-2015">17 septembre 2015</h3>
+<ul>
+<li><a href="../nwp_rips/changelog_rips_fr#le-jeudi-17-septembre-2015">Implementation expérimentale de la version 2.2 du système régional de prévision de glace (SRPG)</a></li>
+</ul>
 <h3 id="20-aout-2015">20 août 2015</h3>
 <ul>
 <li><a href="../nwp_giops/changelog_giops_fr#le-jeudi-20-aout-2015">Déclaration du statut opérationnel pour le Système Global de Prévision Océan-Glace (SGPOG) version 1.1.1</a></li>
+</ul>
+<h3 id="9-juillet-2015">9 juillet 2015</h3>
+<ul>
+<li><a href="../nwp_nowcasting/changelog_nowcasting_fr#le-jeudi-9-juillet-2015">Implantation de la version 1.5 du Système intégré de prévisions immédiates (SIPI 1.5)</a></li>
 </ul>
 <h3 id="23-juin-2015">23 juin 2015</h3>
 <ul>
 <li><a href="../nwp_gdwps/changelog_gdwps_fr#le-mardi-23-juin-2015">Système global de prévision déterministe des vagues (SGPDV)</a></li>
 </ul>
+<h3 id="11-juin-2015">11 juin 2015</h3>
+<ul>
+<li><a href="../nwp_raqdps/changelog_raqdps_fr#le-jeudi-11-juin-2015">Système régional de prévision déterministe de la qualité de l'air (SRPDQA)</a></li>
+</ul>
 <h3 id="3-juin-2015">3 juin 2015</h3>
 <ul>
 <li><a href="../nwp_rdpa/changelog_rdpa_fr#le-mercredi-3-juin-2015">Analyse régionale déterministe de précipitations (ARDP (CaPA)) 3.1.0</a></li>
+</ul>
+<h3 id="16-avril-2015">16 avril 2015</h3>
+<ul>
+<li><a href="../nwp_rdaqa/changelog_rdaqa_fr#le-jeudi-16-avril-2015">Analyse régionale déterministe de la qualité de l'air (ARDQA) 1.1.0</a></li>
 </ul>
 <h2 id="2014">2014</h2>
 <h3 id="18-novembre-2014">18 novembre 2014</h3>
@@ -261,17 +561,22 @@
 <li><a href="../nwp_rdps-cgsl/changelog_rdps-cgsl_fr#le-mardi-18-novembre-2014">Système de prévision couplé atmosphère-océan-glace golfe St-Laurent</a></li>
 <li><a href="../nwp_rdpa/changelog_rdpa_fr#le-mardi-18-novembre-2014">Analyse régionale déterministe de précipitations (ARDP (CaPA)) 3.0.0</a></li>
 <li><a href="../nwp_hrdps/changelog_hrdps_fr#le-mardi-18-novembre-2014">Système haute résolution de prévision déterministe (SHRPD) 4.0.0</a></li>
+<li><a href="../nwp_raqdps/changelog_raqdps_fr#le-mardi-18-novembre-2014">Système régional de prévision déterministe de la qualité de l'air (SRPDQA) 1.5.3</a></li>
 </ul>
 <h3 id="6-mai-2014">6 mai 2014</h3>
 <ul>
-<li><a href="../nwp_gdps/changelog_gdps_fr#le-mardi-6-mai-2014">Incorporation des observations IASI de METOP-B/1 aux données operationnelles des systèmes SGPD</a></li>
-<li><a href="../nwp_rdps/changelog_rdps_fr#le-mardi-6-mai-2014">Incorporation des observations IASI de METOP-B/1 aux données operationnelles des systèmes SRPD</a></li>
+<li><a href="../nwp_gdps/changelog_gdps_fr#le-mardi-6-mai-2014">Incorporation des observations IASI de METOP-B/1 aux données operationnelles du système SGPD</a></li>
+<li><a href="../nwp_rdps/changelog_rdps_fr#le-mardi-6-mai-2014">Incorporation des observations IASI de METOP-B/1 aux données operationnelles du système SRPD</a></li>
 </ul>
 <h2 id="2013">2013</h2>
 <h3 id="4-decembre-2013">4 décembre 2013</h3>
 <ul>
 <li><a href="../nwp_geps/changelog_geps_fr#le-mardi-4-decembre-2013">Système global de prévision d'ensemble (SGPE) 3.1.0</a></li>
 <li><a href="../nwp_reps/changelog_reps_fr#le-mardi-4-decembre-2013">Système régional de prévision d'ensemble (SRPE) 2.0.1</a></li>
+</ul>
+<h3 id="20-novembre-2013">20 novembre 2013</h3>
+<ul>
+<li><a href="../nwp_nowcasting/changelog_nowcasting_fr#le-mercredi-20-novembre-2013">Implantation de la version 1.4 du Système intégré de prévisions immédiates (SIPI 1.4)</a></li>
 </ul>
 <h3 id="7-novembre-2013">7 novembre 2013</h3>
 <ul>
@@ -282,17 +587,51 @@
 <ul>
 <li><a href="../nwp_rdpa/changelog_rdpa_fr#le-mardi-20-aout-2013">Mise en place de la version 2.4 de CaPA (ARPD)</a></li>
 </ul>
+<h3 id="12-aout-2013">12 août 2013</h3>
+<ul>
+<li><a href="../nwp_gdps/changelog_gdps_fr#le-lundi-12-aout-2013">Matrices globales Scribes maintenant disponibles environ 30 minutes plus tôt</a></li>
+</ul>
 <h3 id="23-juillet-2013">23 juillet 2013</h3>
 <ul>
-<li><a href="../nwp_cansips/changelog_cansips_fr#le-mardi-23-juillet-2013">Adjustement à l'analyse de température de la mer (GODAS) pour SPISCan</a></li>
+<li><a href="../nwp_cansips/changelog_cansips_fr#le-mardi-23-juillet-2013">Ajustement à l'analyse de température de la mer (GODAS) pour SPISCan</a></li>
+<li><a href="../nwp_rips/changelog_rips_fr#le-mardi-23-juillet-2013">Implantation expérimentale de la version 2.0 du Système régional de prévision de glace - Composante prévision (RIPS-F)</a></li>
 </ul>
 <h3 id="12-juillet-2013">12 juillet 2013</h3>
 <ul>
-<li><a href="../nwp_hrdps/changelog_hrdps_fr#le-vendredi-12-juillet-2013">Ajustements au cacul du temps violent d'été et au domaine arctique du système à haute résolution de prévision déterministe (SHRPD - version 3.0.1)</a></li>
+<li><a href="../nwp_hrdps/changelog_hrdps_fr#le-vendredi-12-juillet-2013">Ajustements au calcul du temps violent d'été et au domaine arctique du système à haute résolution de prévision déterministe (SHRPD - version 3.0.1)</a></li>
 </ul>
 <h3 id="3-juillet-2013">3 juillet 2013</h3>
 <ul>
-<li><a href="../nwp_rdps/changelog_rdps_fr#le-mercredi-3-juillet-2013">Mise à jour au binaire RDPS (pour la production de la variable PX)</a></li>
+<li><a href="../nwp_rdps/changelog_rdps_fr#le-mercredi-3-juillet-2013">Mise à jour au binaire SRPD (pour la production de la variable PX)</a></li>
+</ul>
+<h3 id="18-juin-2013">18 juin 2013</h3>
+<ul>
+<li>Ajout Td UMOS dans les matrices Scribes.</li>
+<li>Modernisation de la production des bulletins FPCN80, FPCN48-49, FPCN46-47</li>
+</ul>
+<h3 id="17-mai-2013">17 mai 2013</h3>
+<ul>
+<li><a href="../nwp_rips/changelog_rips_fr#le-vendredi-17-mai-2013">Implantation expérimentale de la version 2.0 du Système régional de prévision de glace - Composante analyse (RIPS-A)</a></li>
+</ul>
+<h3 id="13-mai-2013">13 mai 2013</h3>
+<ul>
+<li><a href="../nwp_ophs/changelog_ophs_fr#le-lundi-13-mai-2013">Implantation du Système hydrodynamique opérationnel (SHOP) 1.0.0</a></li>
+</ul>
+<h3 id="7-mai-2013">7 mai 2013</h3>
+<ul>
+<li><a href="../changelog_multisystems_fr#le-mardi-7-mai-2013">Ajout de données METOP-1 à la famille GPS-ro au système d'assimilation de données du CMC</a></li>
+</ul>
+<h3 id="15-avril-2013">15 avril 2013</h3>
+<ul>
+<li><a href="../changelog_multisystems_fr#le-lundi-15-avril-2013">Ajout de données METOP-1 à la famille GPS-ro au système d'assimilation de données du CMC</a></li>
+</ul>
+<h3 id="28-fevrier-2013">28 février 2013</h3>
+<ul>
+<li><a href="../nwp_rdaqa/changelog_rdaqa_fr#le-jeudi-28-fevrier-2013">Analyse régionale déterministe de la qualité de l'air (ARDQA) 1.0.0</a></li>
+</ul>
+<h3 id="26-fevrier-2013">26 février 2013</h3>
+<ul>
+<li><a href="../nwp_raqdps/changelog_raqdps_fr#le-mardi-26-fevrier-2013">Système régional de prévision déterministe de la qualité de l'air (SRPDQA) 1.5.1</a></li>
 </ul>
 <h3 id="13-fevrier-2013">13 février 2013</h3>
 <ul>
@@ -311,11 +650,13 @@
 <li><a href="../nwp_hrdps/changelog_hrdps_fr#le-mercredi-3-octobre-2012">Système haute résolution de prévision déterministe (SHRPD) 3.0.0</a></li>
 <li><a href="../nwp_rdpa/changelog_rdpa_fr#le-mercredi-3-octobre-2012">Analyse régionale déterministe de précipitations (ARDP (CaPA)) 2.3.0</a></li>
 <li><a href="../nwp_rdps-cgsl/changelog_rdps-cgsl_fr#le-mercredi-3-octobre-2012">Ajustement au système de prévision couplé atmosphère-océan-glace golfe St-Laurent</a></li>
+<li><a href="../nwp_raqdps/changelog_raqdps_fr#le-mercredi-3-octobre-2012">Système régional de prévision déterministe de la qualité de l'air (SRPDQA) 1.5.0</a></li>
 </ul>
 <h2 id="2011">2011</h2>
 <h3 id="22-decembre-2011">22 décembre 2011</h3>
 <ul>
 <li><a href="../nwp_hrdps/changelog_hrdps_fr#le-jeudi-22-decembre-2011">Correction à l'analyse de neige du SHRPD 2.2.1</a></li>
+<li><a href="../nwp_raqdps/changelog_raqdps_fr#le-jeudi-22-decembre-2011">Système régional de prévision déterministe de la qualité de l'air (SRPDQA)</a></li>
 </ul>
 <h3 id="1er-decembre-2011">1er décembre 2011</h3>
 <ul>
@@ -629,6 +970,7 @@ La <a href="https://collaboration.cmc.ec.gc.ca/cmc/cmoi/product_guide/docs/lib/o
 - Conditions initiales : décalage de 24 heures
 - 4 saisons ; aucun délai ; durée de 3 mois
 - Rétrospective: 1969-1994</p></div>
+            </div>
         </div>
 
         <footer class="col-md-12">
@@ -642,22 +984,23 @@ La <a href="https://collaboration.cmc.ec.gc.ca/cmc/cmoi/product_guide/docs/lib/o
         <script src="../../js/base.js" defer></script>
         <script src="../../search/main.js" defer></script>
 
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
-    <div class="modal-dialog">
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Search / Rechercher</h4>
             </div>
             <div class="modal-body">
                 <p>
-                    From here you can search these documents. Enter your search terms below.
+                    From here you can search these documents. Enter
+                    your search terms below.
                     <br>
                     Effectuez une recherche dans la documentation en indiquant les termes désirés ci-après.
                 </p>
-                <form role="form">
+                <form>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search / Rechercher..." id="mkdocs-search-query" title="Type search term here">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
                     </div>
                 </form>
                 <div id="mkdocs-search-results"></div>
@@ -666,12 +1009,12 @@ La <a href="https://collaboration.cmc.ec.gc.ca/cmc/cmoi/product_guide/docs/lib/o
             </div>
         </div>
     </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
             </div>
             <div class="modal-body">
               <table class="table">

@@ -9,74 +9,92 @@
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
         <title>Readme fr - MSC Open Data / Données ouvertes du SMC</title>
-        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
+        <link href="../../css/extra.css" rel="stylesheet">
 
         <script src="../../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
     <body>
-
-        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-
-                <!-- Collapsed navigation -->
-                <div class="navbar-header">
-                    <!-- Expander button -->
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="../..">MSC Open Data / <br>Données ouvertes du SMC</a>
-                </div>
+                <a class="navbar-brand" href="../..">MSC Open Data / <br>Données ouvertes du SMC</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
                 <!-- Expanded navigation -->
-                <div class="navbar-collapse collapse">
+                <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li >
-                                <a href="../readme_en/">Available data / <br>Données disponibles</a>
+                            <li class="navitem">
+                                <a href="../readme_en/" class="nav-link">Available data /<br>Données disponibles</a>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Data access / <br>Accès aux données <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Data access /<br>Accès aux données <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
-<li >
-    <a href="../../msc-datamart/readme_en/">MSC Datamart / <br>Datamart du SMC</a>
+<li>
+    <a href="../../msc-geomet/readme_en/" class="dropdown-item">MSC GeoMet /<br>GeoMet du SMC</a>
 </li>
                                     
-<li >
-    <a href="../../msc-geomet/readme_en/">MSC GeoMet / <br>GeoMet du SMC</a>
+<li>
+    <a href="../../msc-datamart/readme_en/" class="dropdown-item">MSC Datamart /<br>Datamart du SMC</a>
 </li>
                                     
-<li >
-    <a href="../../cost-recovered/readme_en/">Cost-recovered services /<br>Services à recouvrement de coûts</a>
+<li>
+    <a href="../../cost-recovered/readme_en/" class="dropdown-item">Cost-recovered services /<br>Services à recouvrement de coûts</a>
 </li>
                                 </ul>
                             </li>
-                            <li >
-                                <a href="../../usage/readme_en/">Usage overview / <br>Aperçu de l'utilisation</a>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Usage and tutorials / <br>Utilisation et tutoriels <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../usage/readme_en/" class="dropdown-item">Usage overview /<br>Aperçu de l'utilisation</a>
+</li>
+                                    
+<li>
+    <a href="../../usage/tutorial_WMS_QGIS_en/" class="dropdown-item">Display and animate data in QGIS /<br>Afficher et animer des couches dans QGIS</a>
+</li>
+                                    
+<li>
+    <a href="../../usage/tutorial_web-maps_en/" class="dropdown-item">Create interactive web maps /<br>Créer des cartes web interactives</a>
+</li>
+                                    
+<li>
+    <a href="../../usage/tutorial_raw-data_QGIS_en/" class="dropdown-item">Add raw data to QGIS /<br>Ajouter des données brutes à QGIS</a>
+</li>
+                                    
+<li>
+    <a href="../../usage/use-case_arthur/use-case_arthur_en/" class="dropdown-item">API usage from a Python script /<br>Utiliser l'API dans un script Python</a>
+</li>
+                                    
+<li>
+    <a href="../../usage/tutorial_OAFeat_QGIS_en/" class="dropdown-item">Use OGC API Features in QGIS /<br>Utiliser OGC API Features dans QGIS</a>
+</li>
+                                    
+<li>
+    <a href="../../msc-geomet/web-services_en/" class="dropdown-item">API technical doc /<br>Doc technique de l'API</a>
+</li>
+                                </ul>
                             </li>
-                            <li >
-                                <a href="https://weather.gc.ca/mainmenu/contact_us_e.html">Contact us / <br>Contactez-nous</a>
+                            <li class="navitem">
+                                <a href="https://weather.gc.ca/mainmenu/contact_us_e.html" class="nav-link">Contact us /<br>Contactez-nous</a>
                             </li>
                         </ul>
 
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
                                 <i class="fa fa-search"></i> Search /<br> <i class="fa fa-fw"></i>Rechercher
                             </a>
                         </li>
@@ -86,18 +104,50 @@
         </div>
 
         <div class="container">
-                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
-    <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#donnees-ouvertes-du-service-meteorologique-du-canada">Données ouvertes du Service météorologique du Canada</a></li>
-            <li><a href="#alertes-meteo-et-previsions-publiques">Alertes météo et prévisions publiques</a></li>
-            <li><a href="#observations">Observations</a></li>
-            <li><a href="#previsions-numeriques-meteorologiques-et-environnementales">Prévisions numériques météorologiques et environnementales</a></li>
-            <li><a href="#donnees-climatiques">Données climatiques</a></li>
-            <li><a href="#autres-donnees">Autres données</a></li>
-            <li><a href="#changements-aux-systemes-de-production-de-donnees-operationnels">Changements aux systèmes de production de données opérationnels</a></li>
-    </ul>
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#donnees-ouvertes-du-service-meteorologique-du-canada" class="nav-link">Données ouvertes du Service météorologique du Canada</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#alertes-meteo-et-previsions-publiques" class="nav-link">Alertes météo et prévisions publiques</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#observations" class="nav-link">Observations</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#previsions-numeriques-meteorologiques-et-environnementales" class="nav-link">Prévisions numériques météorologiques et environnementales</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#donnees-climatiques" class="nav-link">Données climatiques</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#autres-donnees" class="nav-link">Autres données</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#changements-aux-systemes-de-production-de-donnees-operationnels" class="nav-link">Changements aux systèmes de production de données opérationnels</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
 </div></div>
-                <div class="col-md-9" role="main">
+                    <div class="col-md-9" role="main">
 
 <p><a href="../readme_en/">In English</a></p>
 <p><img alt="ECCC logo" src="../../img_eccc-logo.png" /></p>
@@ -129,15 +179,18 @@
 <li><a href="../nwp_gdps/readme_gdps_fr/">Système global de prévision déterministe (SGPD)</a></li>
 <li><a href="../nwp_rdps/readme_rdps_fr/">Système régional de prévision déterministe (SRPD)</a></li>
 <li><a href="../nwp_hrdps/readme_hrdps_fr/">Système à haute résolution de prévision déterministe (SHRPD)</a></li>
+<li><a href="../nwp_caps/readme_caps_fr/">Système canadien de prévision de l'Arctique (SCPA) expérimental</a></li>
 <li><a href="../nwp_giops/readme_giops_fr/">Système global de prévision océan-glace (SGPOG)</a></li>
+<li><a href="../nwp_riops/readme_riops_fr/">Système régional de prévision océan-glace (SRPOG)</a></li>
 <li><a href="../nwp_rdwps/readme_rdwps_fr/">Système régional de prévision déterministe de vague (SRPDV)</a></li>
 <li><a href="../nwp_gdwps/readme_gdwps_fr/">Système global de prévision déterministe de vague (SGPDV)</a></li>
 <li><a href="../nwp_rdpa/readme_rdpa_fr/">Analyse régionale déterministe de précipitation (ARDP)</a></li>
 <li><a href="../nwp_hrdpa/readme_hrdpa_fr/">Analyse à haute résolution déterministe de précipitation (AHRDP)</a></li>
-<li><a href="../nwp_hrdpa-watershed/readme_hrdpa-watershed_fr/">Précipitations moyennes par bassin-versant de l'Analyse à haute résolution déterministe de précipitation (AHRDP bassin-versant)</a>)</li>
+<li><a href="../nwp_hrdpa-watershed/readme_hrdpa-watershed_fr/">Précipitations moyennes par bassin-versant de l'Analyse à haute résolution déterministe de précipitation (AHRDP bassin-versant)</a></li>
 <li><a href="../nwp_nowcasting/readme_nowcasting_fr/">Matrices Scribe de prévision immédiates</a></li>
 <li><a href="../nwp_rdps-cgsl/readme_rdps-cgsl_fr/">Système régional de prévision déterministe couplé au Golfe du Saint-Laurent (SRPD couplé Golfe du Saint-Laurent)</a></li>
 <li><a href="../nwp_wcps/readme_wcps_fr/">Système de prévision du cycle de l'eau (SPCE)</a></li>
+<li><a href="../nwp_raqdps-fw/readme_raqdps-fw_fr/">Système régional de prévision déterministe de la qualité de l'air FireWork (RAQDPS-FW)</a></li>
 <li><a href="../prev_vertical-profiles/readme_prev-vertical-pfl_fr/">Profils verticaux à partir du Système régional de prévision déterministe (SRPD)</a></li>
 </ul>
 </li>
@@ -167,6 +220,7 @@
 </ul>
 <h2 id="changements-aux-systemes-de-production-de-donnees-operationnels">Changements aux systèmes de production de données opérationnels</h2>
 <p>Les changements aux systèmes de production de données opérationnels sont documentés dans les sous-pages des jeux de données. Le <a href="../changelog_nwp_fr/">journal présentant la chronologie des modifications des systèmes de prévision numérique du temps (PNT) est disponible</a>.</p></div>
+            </div>
         </div>
 
         <footer class="col-md-12">
@@ -180,22 +234,23 @@
         <script src="../../js/base.js" defer></script>
         <script src="../../search/main.js" defer></script>
 
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
-    <div class="modal-dialog">
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Search / Rechercher</h4>
             </div>
             <div class="modal-body">
                 <p>
-                    From here you can search these documents. Enter your search terms below.
+                    From here you can search these documents. Enter
+                    your search terms below.
                     <br>
                     Effectuez une recherche dans la documentation en indiquant les termes désirés ci-après.
                 </p>
-                <form role="form">
+                <form>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search / Rechercher..." id="mkdocs-search-query" title="Type search term here">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
                     </div>
                 </form>
                 <div id="mkdocs-search-results"></div>
@@ -204,12 +259,12 @@
             </div>
         </div>
     </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
             </div>
             <div class="modal-body">
               <table class="table">
