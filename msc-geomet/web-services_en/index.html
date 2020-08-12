@@ -381,7 +381,7 @@
 <tbody>
 <tr>
 <td>INFO_FORMAT</td>
-<td>The format of the data returned by the query. Accepted values for this parameter are: <code>text/plain</code> (default) or <code>application/vnd.ogc.gml</code></td>
+<td>The format of the data returned by the query. Accepted values for this parameter are: <code>text/plain</code> (default), <code>application/json</code> or  <code>application/vnd.ogc.gml</code></td>
 </tr>
 <tr>
 <td>FEATURE_COUNT</td>
@@ -399,7 +399,7 @@
 </table>
 <p>A GetFeatureInfo request for the same image requested in the GetMap example above would look like this:</p>
 <pre><code>https://geo.weather.gc.ca/geomet?SERVICE=WMS&amp;VERSION=1.3.0&amp;REQUEST=GetFeatureInfo&amp;BBOX=45,-75,45.5,-74.5
-&amp;CRS=EPSG:4326&amp;WIDTH=10&amp;HEIGHT=10&amp;LAYERS=GDPS.ETA_TT&amp;INFO_FORMAT=text/plain&amp;QUERY_LAYERS=GDPS.ETA_TT&amp;I=5&amp;J=5
+&amp;CRS=EPSG:4326&amp;WIDTH=10&amp;HEIGHT=10&amp;LAYERS=GDPS.ETA_TT&amp;INFO_FORMAT=application/json&amp;QUERY_LAYERS=GDPS.ETA_TT&amp;I=5&amp;J=5
 </code></pre>
 
 <h3 id="wms-getlegendgraphic">WMS GetLegendGraphic</h3>
