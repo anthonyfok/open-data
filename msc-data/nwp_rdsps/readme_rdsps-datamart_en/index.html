@@ -83,6 +83,10 @@
 </li>
                                     
 <li>
+    <a href="../../../usage/tutorial_gdal/tutorial_gdal_en/" class="dropdown-item">Use GDAL commands /<br>Utiliser des commandes GDAL</a>
+</li>
+                                    
+<li>
     <a href="../../../msc-geomet/web-services_en/" class="dropdown-item">API technical doc /<br>Doc technique de l'API</a>
 </li>
                                 </ul>
@@ -202,7 +206,7 @@
 <li><strong>Z</strong> : Time zone (UTC hour)</li>
 <li><strong>MSC</strong> : Constant string indicating the Meteorological Service of Canada, source of data</li>
 <li><strong>RDSPS-Atlantic-North-West</strong> : Constant string indicating that data is from the Regional Deterministic Storm Surge Prediction System over the North-West domain</li>
-<li><strong>VAR</strong> : Variable type included in the file [ETAS]</li>
+<li><strong>VAR</strong> : Variable type included in the file [ETAS, SSHT, SSH]</li>
 <li><strong>LVL</strong> : Vertical level [SFC for the surface]</li>
 <li><strong>Grille</strong> : Horizontal grid lat-lon [LatLon]</li>
 <li><strong>Resolution</strong> : 0.033x0.033. Indicating resolution in degreee 0.033x0.033 in latitude and longitude directions</li>
@@ -228,6 +232,20 @@
 <td>etas</td>
 <td>Storm surge</td>
 <td>ETAS</td>
+<td>SFC</td>
+<td>m</td>
+</tr>
+<tr>
+<td>ssh_tide</td>
+<td>Tidal heights</td>
+<td>SSHT</td>
+<td>SFC</td>
+<td>m</td>
+</tr>
+<tr>
+<td>zos</td>
+<td>Total Water Level (Sea surface height)</td>
+<td>SSH</td>
 <td>SFC</td>
 <td>m</td>
 </tr>

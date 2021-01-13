@@ -83,6 +83,10 @@
 </li>
                                     
 <li>
+    <a href="../tutorial_gdal/tutorial_gdal_en/" class="dropdown-item">Use GDAL commands /<br>Utiliser des commandes GDAL</a>
+</li>
+                                    
+<li>
     <a href="../../msc-geomet/web-services_en/" class="dropdown-item">API technical doc /<br>Doc technique de l'API</a>
 </li>
                                 </ul>
@@ -151,8 +155,9 @@
 </ul>
 </li>
 <li><a href="#comment-acceder-aux-donnees-brutes">Comment accéder aux données brutes</a><ul>
-<li><a href="#telechargement-de-donnees-brutes">Téléchargement de données brutes</a></li>
 <li><a href="#services-web-de-donnees-brutes">Services web de données brutes</a></li>
+<li><a href="#telechargement-de-donnees-brutes">Téléchargement de données brutes</a></li>
+<li><a href="#manipuler-les-donnees-brutes-a-partir-de-la-ligne-de-commandes">Manipuler les données brutes à partir de la ligne de commandes</a></li>
 </ul>
 </li>
 </ul>
@@ -160,7 +165,7 @@
 <p>Le Service météorologique du Canada rend disponible de l'information sur les conditions météorologiques, hydriques et environnementales passées, présentes et futures pour le Canada et le monde. <a href="../../msc-data/readme_fr/">La liste des données disponibles est disponible ici</a>.</p>
 <h2 id="comment-visualiser-les-donnees">Comment visualiser les données</h2>
 <h3 id="logiciel-de-bureau">Logiciel de bureau</h3>
-<p>Les données ouvertes du SMC dans des logiciel de bureau soit (A) en se connectant au service Web Map Service (WMS) de <a href="../../msc-geomet/readme_fr/">GeoMet du SMC</a> ou (B) en téléchargeant les données brutes du <a href="../../msc-datamart/readme_fr/">Datamart du SMC</a> ou via le service Web Coverage Service (WCS) ou OGC API - Features (WFS 3) de GeoMet du SMC et en chargeant les données brutes dans l'application.</p>
+<p>Les données ouvertes du SMC dans des logiciels de bureau soit (A) en se connectant au service Web Map Service (WMS) de <a href="../../msc-geomet/readme_fr/">GeoMet du SMC</a> ou (B) en téléchargeant les données brutes du <a href="../../msc-datamart/readme_fr/">Datamart du SMC</a> ou via le service Web Coverage Service (WCS) ou OGC API - Features (WFS 3) de GeoMet du SMC et en chargeant les données brutes dans l'application.</p>
 <p>Les données ouvertes du SMC peuvent être visualisées interactivement dans les logiciels qui supportent le standard Web Map Service (WMS) de l'Open Geospatial Consortium (OGC), tel que le logiciel libre <a href="https://qgis.org">QGIS</a> ainsi que ArcGIS d'Esri. Les instructions pour ajouter les couches WMS de GeoMet du SMC dans <a href="https://docs.qgis.org/3.4/en/docs/training_manual/online_resources/wms.html">QGIS</a> et <a href="https://desktop.arcgis.com/en/arcmap/latest/map/web-maps-and-services/adding-wms-services.htm">ArcGIS</a> sont disponibles. Les logiciels de bureau peuvent permettre aux usagers de changer les couleurs des couches (styles WMS) ainsi qu'animer les couches pour les pas de temps disponibles. Les détails techniques sur les paramètres WMS disponibles sont documentés dans la <a href="../../msc-geomet/web-services_fr/">section sur les services web</a>. Pour télécharger des données brutes, veuillez vous référer à la section <a href="#comment-acceder-aux-donnees-brutes">Comment accéder aux données brutes</a>.</p>
 <p>Les tutoriels suivants sont disponibles pour le logiciel de bureau QGIS : <a href="../tutorial_WMS_QGIS_fr/">ajouter, effectuer des requêtes et animer des couches WMS</a>, <a href="../tutorial_OAFeat_QGIS_fr/">ajouter et effectuer des requêtes aux couches OGC API Features</a> et <a href="../tutorial_raw-data_QGIS_fr/">ajouter des données brutes</a>. L'image suivante présente la racine de l'arborescence des couches de GeoMet-Météo dans QGIS :</p>
 <p><img alt="L'arborescence des couches de GeoMet-Météo dans QGIS" src="https://collaboration.cmc.ec.gc.ca/cmc/cmos/public_doc/usage/GeoMet-Weather_QGIS_Layer-tree_fr.jpg" /></p>
@@ -223,10 +228,12 @@
 <p>Les données brutes du SMC peuvent être récupérées par les <a href="../../msc-geomet/readme_fr/">services web GeoMet du SMC</a>. Ces services web permettent aux usagers de récupérer les données brutes en spécifiant les coordonnées géographiques, la projection cartographique, les dimensions temporelles et en choisissant parmi les formats de données disponibles. Les détails sur les paramètres à spécifier sont disponibles dans la section de la documentation technique sur les <a href="../../msc-geomet/web-services_fr/">services web</a>.</p>
 <p>Les données brutes à des lieux géographiques spécifiques peuvent être récupérées par une requête Web Map Service (WMS) GetFeatureInfo. Les détails sont disponibles dans <a href="../../msc-geomet/web-services_fr/#wms-getfeatureinfo">la documentation technique</a>. Voici un exemple de <a href="https://geo.weather.gc.ca/geomet/?SERVICE=WMS&amp;VERSION=1.3.0&amp;REQUEST=GetFeatureInfo&amp;QUERY_LAYERS=GDPS.ETA_TT&amp;INFO_FORMAT=application/json&amp;i=5&amp;j=5&amp;EXCEPTIONS=xml&amp;LAYERS=GDPS.ETA_TT&amp;CRS=EPSG:4326&amp;BBOX=45.50,-73.56,45.51,-73.55&amp;WIDTH=10&amp;HEIGHT=10">requête WMS GetFeatureInfo pour la temperature du Système global de prévision déterministe (SGPD) pour Montréal, Canada</a>.</p>
 <p>Les données brutes pour des données vectorielles peuvent être récupérées par une requête OGC API - Features (WFS 3). Exemple d'une <a href="https://geo.weather.gc.ca/geomet/features/collections/hydrometric-daily-mean/items?STATION_NUMBER=05PF049">requête WFS 3 pour les données des moyennes quotidiennes hydrométriques à la station Winnipeg River</a> qui retourne les données correspondantes en tant que fichier GeoJSON.</p>
-<p>Les données brutes pour des données matricielles peuvent être récupérées par une requête Web Coverage Service (WCS). Exemple d'une <a href="https://geo.weather.gc.ca/geomet?SERVICE=WCS&amp;VERSION=2.0.1&amp;REQUEST=GetCoverage&amp;COVERAGEID=RDPA.6F_PR&amp;SUBSETTINGCRS=EPSG:4326&amp;FORMAT=image/netcdf&amp;TIME=2019-05-14T12:00:00Z">requête WCS 2 pour l'Analyse régionale de déterministe de précipitation (ARPD) au format netCDF à un pas de temps spécifié</a>. Une astuce pour construire des requêtes WCS est d'utiliser <a href="https://changements-climatiques.canada.ca/donnees-climatiques/#/analyse-regionale-deterministe-precipitation">l'Outil d'extraction de données climatiques du Centre canadien des services climatiques pour la couche ARPD</a> et remplacer la valeur COVERAGEID de RDPA.* pour une autre couche disponible.</p>
+<p>Les données brutes pour des données matricielles peuvent être récupérées par une requête Web Coverage Service (WCS). Exemple d'une <a href="https://geo.weather.gc.ca/geomet?SERVICE=WCS&amp;VERSION=2.0.1&amp;REQUEST=GetCoverage&amp;COVERAGEID=RDPA.6F_PR&amp;SUBSETTINGCRS=EPSG:4326&amp;FORMAT=image/netcdf&amp;TIME=2019-05-14T12:00:00Z">requête WCS 2 pour l'Analyse régionale de déterministe de précipitation (ARPD) au format netCDF à un pas de temps spécifié</a>. <a href="../tutorial_gdal/tutorial_gdal_fr/">Un tutoriel est disponible pour sauvegarder la sortie d'une requête WCS sur le disque</a> . Une astuce pour construire des requêtes WCS est d'utiliser <a href="https://changements-climatiques.canada.ca/donnees-climatiques/#/analyse-regionale-deterministe-precipitation">l'Outil d'extraction de données climatiques du Centre canadien des services climatiques pour la couche ARPD</a> et remplacer la valeur COVERAGEID de RDPA.* pour une autre couche disponible.</p>
 <h3 id="telechargement-de-donnees-brutes">Téléchargement de données brutes</h3>
 <p>Les données brutes du SMC peuvent être <a href="../../msc-datamart/amqp_fr/">automatiquement récupérées dès quelles deveinnent disponibles par le biais du protocol Advanced Message Queuing Protocol (AMQP)</a>.</p>
 <p>Les données brutes peuvent également être téléchargées directement sur le web sur le serveur <a href="../../msc-datamart/readme_fr/">Datamart du SMC</a>.</p>
+<h3 id="manipuler-les-donnees-brutes-a-partir-de-la-ligne-de-commandes">Manipuler les données brutes à partir de la ligne de commandes</h3>
+<p>Les données peuvent être manipulées en utilisant des commandes de la librairie logicielle GDAL. Un <a href="../tutorial_gdal/tutorial_gdal_fr/">tutoriel démontrant les commandes les plus communes de la librairie logicielle GDAL</a> est disponible.</p>
 <p><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.6.5/ol.css" integrity="sha256-rQq4Fxpq3LlPQ8yP11i6Z2lAo82b6ACDgd35CKyNEBw=" crossorigin="anonymous" />
 <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.6.5/ol.js" integrity="sha256-77IKwU93jwIX7zmgEBfYGHcmeO0Fx2MoWB/ooh9QkBA=" crossorigin="anonymous"></script>

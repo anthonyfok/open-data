@@ -25,7 +25,6 @@ let layers = [
       source: new ol.source.OSM()
     }),
     new ol.layer.Image({
-      opacity: 0.4,
       source: new ol.source.ImageWMS({
         format: 'image/png',
         url: 'https://geo.weather.gc.ca/geomet',
@@ -55,7 +54,7 @@ function setTime() {
     } else if (current_time >= endTime) {
       current_time = startTime
     } else {
-      current_time = new Date(current_time.setMinutes(current_time.getMinutes() + 720));
+	  current_time = new Date(current_time.setUTCMinutes(current_time.getUTCMinutes() + 720));
     }
     layers[1].getSource().updateParams({'TIME': current_time.toISOString().split('.')[0]+"Z"});
     updateInfo(current_time)
